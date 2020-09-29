@@ -1,0 +1,16 @@
+@import '../../node_modules/normalize.css/normalize';
+
+// Base
+@import "base/_variables";
+@import "base/_reset";
+
+
+// Layout
+@import "layout/_extra";
+@import "layout/_general";
+
+// Page styles
+@import "modules/_section-main";
+@import "modules/_section-general";
+@import "modules/_section-audits-charts";
+@import "modules/_footer";

@@ -1,0 +1,48 @@
+.general-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: 992px) {
+        flex-wrap: nowrap;
+    }
+
+    &__wgt {
+        width: 100%;
+        padding: 25px 20px;
+
+        &:last-child {
+            @media (min-width: 992px) {
+                margin-left: 10px;
+                margin-right: 0;
+            }
+        }
+
+        @media (min-width: 992px) {
+            width: 50%;
+            margin-right: 10px;
+        }
+    }
+}
+
+.description-chart {
+    &__item {
+        padding-bottom: 25px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 14px;
+        color: #23D4DF;
+        padding-bottom: 5px;
+    }
+
+    &__subtitle {
+        font-weight: normal;
+        font-size: 16px;
+        color: #7C828A;
+    }
+}

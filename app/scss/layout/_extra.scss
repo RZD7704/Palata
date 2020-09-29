@@ -1,0 +1,188 @@
+.card {
+    border: none
+}
+
+.btn-head {
+    background: #fff;
+    border-bottom: 2px solid rgba(211, 211, 211, 0.8);
+    border-top: none;
+    padding: 0;
+}
+
+.btn-accordion {
+    font-weight: 500;
+    font-size: 20px;
+    color: #23D4DF;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.basic-head {
+    padding-top: 50px;
+    padding-bottom: 35px;
+}
+
+.basic-title {
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: #23D4DF;
+    position: relative;
+    padding-bottom: 7px;
+
+    &::before {
+        display: block;
+        content: '';
+        width: 30px;
+        border: 1px solid #23D4DF;
+        background: #23D4DF;
+        position: absolute;
+        top: -10px;
+    }
+}
+
+.basic-subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    color: #363636;
+}
+
+.basic-block {
+    box-shadow: 0px 1px 8px rgba(83, 85, 155, 0.15);
+    border-radius: 8px;
+}
+
+.basic-points {
+    &__item {
+        display: flex;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    &__point {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    &__point_theme_heavy-blue {
+        background: $HeavyBlue;
+    }
+
+    &__point_theme_blue {
+        background: $Blue;
+    }
+
+    &__point_theme_pink {
+        background: $Pink;
+    }
+
+    &__point_theme_bright-green {
+        background: $BrightGreen;
+    }
+
+    &__point_theme_light-green {
+        background: $LightGreen;
+    }
+
+    &__point_theme_dark-green {
+        background: $DarkGreen;
+    }
+
+    &__point_theme_grey {
+        background: $Grey;
+    }
+
+    &__point_theme_light-blue {
+        background: $LightBlue;
+    }
+
+    &__point_theme_green {
+        background: $Green;
+    }
+
+    &__txt {
+        font-weight: normal;
+        font-size: 16px;
+        color: #7C828A;
+    }
+}
+
+.basic-description {
+    &__wgt {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 20px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__headline {
+        font-weight: bold;
+        font-size: 16px;
+        color: #23D4DF;
+    }
+
+    &__desc {
+        font-weight: 500;
+        font-size: 16px;
+        color: #363636;
+    }
+}
+
+.hidden-block {
+
+    &__wrapper_first,
+    &__wrapper_second,
+    &__wrapper_third,
+    &__wrapper_four {
+        @media(max-width: 991px) {
+            position: relative;
+            max-height: 200px;
+            overflow: hidden;
+            transition: max-height .2s ease;
+
+            &.-expanded {
+                max-height: 100vh;
+            }
+        }
+
+    }
+
+    &__wrapper:not(.-expanded)::after {
+        @media(max-width: 991px) {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__btn-block {
+        margin-top: 5px;
+    }
+
+    &__btn {
+        display: table;
+        cursor: pointer;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 20px;
+        color: #23D4DF;
+        padding: 20px;
+        background: #fff;
+    }
+}

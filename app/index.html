@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="content">
+		<section class="section section-main">
+			<div class="main-bg"></div>
+			<div class="support-bg"></div>
+			<div class="container">
+				<div class="main-content">
+					<h1 class="main-content__title">Рахункова палата</h1>
+					<div class="main-content__support">
+						<p class="main-content__support-txt">Проект реалізовано за підтримки:</p>
+						<img class="main-content__support-img" src="img/support-logo.png" alt="Logo">
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="accordion" id="accordionInfo">
+			<div class="card">
+				<div class="btn-head" id="headingOne">
+					<h2 class="mb-0">
+						<button class="btn-accordion btn-block" type="button" data-toggle="collapse"
+							data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							Загальні дані
+						</button>
+					</h2>
+				</div>
+
+				<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionInfo">
+					<div class="card-body">
+						<section class="section section-general">
+							<div class="container">
+								<div class="basic-head">
+									<h2 class="basic-title">Загальні дані</h2>
+									<p class="basic-subtitle">про рахункову палату</p>
+								</div>
+								<div class="general-content">
+									<div class="general-content__wgt basic-block">
+										<div class="general-chart"></div>
+										<div class="description-chart">
+											<div class="description-chart__item">
+												<div class="d-flex flex-column">
+													<div class="description-chart__title">
+														Дотримання строку розгляду
+													</div>
+													<div class="description-chart__subtitle">
+														1 місяць (Так)
+													</div>
+												</div>
+												<div class="description-chart__subchart">
+
+												</div>
+											</div>
+											<div class="description-chart__item">
+												<div class="d-flex flex-column">
+													<div class="description-chart__title">
+														Дотримання строку розгляду
+													</div>
+													<div class="description-chart__subtitle">
+														1 місяць (Так)
+													</div>
+												</div>
+												<div class="description-chart__subchart">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="general-content__wgt basic-block">
+										<div class="general-chart"></div>
+										<div class="basic-points">
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">інформація відсутня(320)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">ні (240)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">так (35)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">внесено в план (765)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">50/50 (787)</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="btn-head" id="headingTwo">
+					<h2 class="mb-0">
+						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
+							data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							Суб’єкти аудиту
+						</button>
+					</h2>
+				</div>
+				<div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionInfo">
+					<!-- <div class="card-body"> -->
+					<section class="section section-audits-charts">
+						<div class="container">
+							<div class="audits-charts__wrapper">
+								<div class="audits-charts__wgt">
+									<div class="basic-head">
+										<h2 class="basic-title">Суб’єкти аудитів</h2>
+									</div>
+									<div class="audits-charts__content basic-block">
+										<div class="audits-charts__content-item audit-chart">
+											<canvas id="auditChart1" width="200" height="150"></canvas>
+										</div>
+										<div class="audits-charts__content-item basic-points">
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Виконавча влада (913)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_blue">
+												</div>
+												<div class="basic-points__txt">Правоохоронці (34)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_pink">
+												</div>
+												<div class="basic-points__txt">ОДА, КМДА (125)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_bright-green">
+												</div>
+												<div class="basic-points__txt">Держ підприємства та
+													установи (43)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_light-green">
+												</div>
+												<div class="basic-points__txt">Місцеве самоврядування (21)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_dark-green">
+												</div>
+												<div class="basic-points__txt">Суди (27)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_grey">
+												</div>
+												<div class="basic-points__txt">Інші (74)</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="audits-charts__wgt">
+									<div class="basic-head">
+										<h2 class="basic-title">Аудити</h2>
+									</div>
+									<div class="audits-charts__content basic-block">
+										<div class="audits-charts__content-item audit-chart">
+											<canvas id="auditChart2" width="200" height="150"></canvas>
+										</div>
+										<div class="audits-charts__content-item basic-points">
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Виконавча влада (913)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_blue">
+												</div>
+												<div class="basic-points__txt">Правоохоронці (34)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_pink">
+												</div>
+												<div class="basic-points__txt">ОДА, КМДА (125)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_bright-green">
+												</div>
+												<div class="basic-points__txt">Держ підприємства та
+													установи (43)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_light-green">
+												</div>
+												<div class="basic-points__txt">Місцеве самоврядування (21)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_dark-green">
+												</div>
+												<div class="basic-points__txt">Суди (27)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_grey">
+												</div>
+												<div class="basic-points__txt">Інші (74)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_grey">
+												</div>
+												<div class="basic-points__txt">Інші (74)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_grey">
+												</div>
+												<div class="basic-points__txt">Інші (74)</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_grey">
+												</div>
+												<div class="basic-points__txt">Інші (74)</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section section-audits-tables">
+						<div class="container">
+							<div class="basic-head d-none d-lg-block">
+								<h2 class="basic-title">Суб’єкти аудиту</h2>
+								<p class="basic-subtitle">та кількість рекомендацій</p>
+							</div>
+							<div class="audits-tables__wrapper">
+								<div class="audits-tables__wgt">
+									<div class="basic-head d-lg-none">
+										<h2 class="basic-title">Суб’єкти аудиту</h2>
+										<p class="basic-subtitle">та кількість рекомендацій</p>
+									</div>
+									<div class="hidden-block">
+										<div
+											class="basic-description basic-block audits-tables__block hidden-block__wrapper_first">
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Антимонопольний комітет</p>
+												<p class="basic-description__desc flex-shrink-0">40 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінекономрозвитку</p>
+												<p class="basic-description__desc flex-shrink-0">25 рекондацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінсоцполітики</p>
+												<p class="basic-description__desc flex-shrink-0">108 рекомендацій
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінприроди</p>
+												<p class="basic-description__desc flex-shrink-0">41 рекамендація</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">КМУ</p>
+												<p class="basic-description__desc flex-shrink-0">301 рекомендація
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОЗ</p>
+												<p class="basic-description__desc flex-shrink-0">37 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+										</div>
+										<div class="hidden-block__btn-block d-lg-none">
+											<div class="hidden-block__btn hidden-block__btn_first">Більше</div>
+										</div>
+									</div>
+								</div>
+								<div class="audits-tables__wgt">
+									<div class="basic-head d-lg-none">
+										<h2 class="basic-title">Суб’єкти аудиту</h2>
+										<p class="basic-subtitle">та кількість рекомендацій</p>
+									</div>
+									<div class="hidden-block">
+										<div
+											class="basic-description basic-block audits-tables__block hidden-block__wrapper_second">
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Антимонопольний комітет</p>
+												<p class="basic-description__desc flex-shrink-0">40 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінекономрозвитку</p>
+												<p class="basic-description__desc flex-shrink-0">25 рекондацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінсоцполітики</p>
+												<p class="basic-description__desc flex-shrink-0">108 рекомендацій
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінприроди</p>
+												<p class="basic-description__desc flex-shrink-0">41 рекамендація</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">КМУ</p>
+												<p class="basic-description__desc flex-shrink-0">301 рекомендація
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОЗ</p>
+												<p class="basic-description__desc flex-shrink-0">37 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+										</div>
+										<div class="hidden-block__btn-block d-lg-none">
+											<div class="hidden-block__btn hidden-block__btn_second">Більше</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section section-audits-deadlines">
+						<div class="container">
+
+						</div>
+					</section>
+
+					<section class="section section-audits-tables">
+						<div class="container">
+							<div class="basic-head d-none d-lg-block">
+								<h2 class="basic-title">Суб’єкти аудиту</h2>
+								<p class="basic-subtitle">та кількість рекомендацій</p>
+							</div>
+							<div class="audits-tables__wrapper">
+								<div class="audits-tables__wgt">
+									<div class="basic-head d-lg-none">
+										<h2 class="basic-title">Суб’єкти аудиту</h2>
+										<p class="basic-subtitle">та кількість рекомендацій</p>
+									</div>
+									<div class="hidden-block">
+										<div
+											class="basic-description basic-block audits-tables__block hidden-block__wrapper_third">
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Антимонопольний комітет</p>
+												<p class="basic-description__desc flex-shrink-0">40 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінекономрозвитку</p>
+												<p class="basic-description__desc flex-shrink-0">25 рекондацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінсоцполітики</p>
+												<p class="basic-description__desc flex-shrink-0">108 рекомендацій
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінприроди</p>
+												<p class="basic-description__desc flex-shrink-0">41 рекамендація</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">КМУ</p>
+												<p class="basic-description__desc flex-shrink-0">301 рекомендація
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОЗ</p>
+												<p class="basic-description__desc flex-shrink-0">37 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+										</div>
+										<div class="hidden-block__btn-block d-lg-none">
+											<div class="hidden-block__btn hidden-block__btn_third">Більше</div>
+										</div>
+									</div>
+								</div>
+								<div class="audits-tables__wgt">
+									<div class="basic-head d-lg-none">
+										<h2 class="basic-title">Суб’єкти аудиту</h2>
+										<p class="basic-subtitle">та кількість рекомендацій</p>
+									</div>
+									<div class="hidden-block">
+										<div
+											class="basic-description basic-block audits-tables__block hidden-block__wrapper_four">
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Антимонопольний комітет</p>
+												<p class="basic-description__desc flex-shrink-0">40 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінекономрозвитку</p>
+												<p class="basic-description__desc flex-shrink-0">25 рекондацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінсоцполітики</p>
+												<p class="basic-description__desc flex-shrink-0">108 рекомендацій
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">Мінприроди</p>
+												<p class="basic-description__desc flex-shrink-0">41 рекамендація</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">КМУ</p>
+												<p class="basic-description__desc flex-shrink-0">301 рекомендація
+												</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОЗ</p>
+												<p class="basic-description__desc flex-shrink-0">37 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">МОН</p>
+												<p class="basic-description__desc flex-shrink-0">58 рекомендацій</p>
+											</div>
+											<div class="basic-description__wgt">
+												<p class="basic-description__headline">ДФС</p>
+												<p class="basic-description__desc flex-shrink-0">42 рекомендації</p>
+											</div>
+										</div>
+										<div class="hidden-block__btn-block d-lg-none">
+											<div class="hidden-block__btn hidden-block__btn_four">Більше</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- </div> -->
+				</div>
+			</div>
+			<div class="card">
+				<div class="btn-head" id="headingThree">
+					<h2 class="mb-0">
+						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
+							data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							Виконання рекомендацій
+						</button>
+					</h2>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionInfo">
+					<div class="card-body">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+						3
+						wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+						laborum
+						eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+						nulla
+						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+						nesciunt
+						sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+						farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+						labore sustainable VHS.
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="btn-head" id="headingFour">
+					<h2 class="mb-0">
+						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
+							data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							Реалізація програм
+						</button>
+					</h2>
+				</div>
+				<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionInfo">
+					<div class="card-body">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+						3
+						wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
+						laborum
+						eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee
+						nulla
+						assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+						nesciunt
+						sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+						farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+						labore sustainable VHS.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__span">
+				<p class="footer__span-txt text-center">Розрахункова палата 2020</p>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+	<script src="js/libs/bootstrap.min.js"></script>
+	<script src="js/libs/popper.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
