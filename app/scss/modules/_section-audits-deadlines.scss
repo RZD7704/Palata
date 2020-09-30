@@ -1,0 +1,114 @@
+.audits-deadlines {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__wgt {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 85px;
+
+        @media (min-width: 992px) {
+            width: 50%;
+            padding-bottom: 0;
+        }
+    }
+
+}
+
+.audits-deadlines-chart {
+    width: 100%;
+    margin-bottom: 35px;
+
+    @media (min-width: 768px) {
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+.audits-deadlines-points {
+    width: 100%;
+
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}
+
+.deadlines-tabs {
+    position: relative;
+
+    &__nav {
+        position: absolute;
+        bottom: 0;
+        right: 35px;
+
+        @media (max-width: 1199px) {
+            right: -10px;
+        }
+
+        @media (max-width: 991px) {
+            right: 80px;
+        }
+
+        @media (max-width: 767px) {
+            bottom: -35px;
+            left: 0;
+        }
+
+    }
+
+    &__item {}
+
+    &__link {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        color: #7C828A;
+        transition: all .8s;
+        padding: 0;
+        margin-right: 30px;
+
+        &:hover {
+            text-decoration-line: underline;
+            color: #23D4DF;
+        }
+    }
+
+    &__content {
+        min-width: 300px;
+        // padding-bottom: 35px;
+
+        // @media (min-width: 992px) {
+        //     padding-bottom: 0;
+        // }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__content-item {
+        width: 100%;
+        padding-bottom: 35px;
+
+        @media (min-width: 768px) {
+            width: 50%;
+            padding-bottom: 0;
+        }
+    }
+
+    &__content-title {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        color: #363636;
+        padding-bottom: 25px;
+    }
+}
+
+.deadlines-tabs__nav .deadlines-tabs__link.active {
+    background-color: transparent;
+    color: #23D4DF;
+}

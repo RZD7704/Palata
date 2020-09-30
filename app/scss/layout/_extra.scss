@@ -119,9 +119,13 @@
 .basic-description {
     &__wgt {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: space-between;
         padding-bottom: 20px;
+
+        @media (min-width: 992px) {
+            flex-direction: row;
+        }
 
         &:last-child {
             padding-bottom: 0;
@@ -151,10 +155,11 @@
             position: relative;
             max-height: 200px;
             overflow: hidden;
-            transition: max-height .2s ease;
+            transition: max-height .5s, padding .5s;
 
             &.-expanded {
-                max-height: 100vh;
+                max-height: 1000px;
+                height: auto;
             }
         }
 
