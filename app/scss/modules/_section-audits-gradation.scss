@@ -1,0 +1,73 @@
+.gradation-tabs {
+    &__list {}
+
+    &__item {}
+
+    &__link {}
+
+    &__content {}
+
+    &__pane {}
+
+    &__block {
+        padding: 35px 25px;
+    }
+}
+
+.gradation-head {
+    display: flex;
+
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #23D4DF;
+        padding-right: 60px;
+    }
+
+    &__txt {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.08em;
+        color: #363636;
+    }
+}
+
+.gradation-body {
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__col {
+        width: 100%;
+
+        @media (min-width: 992px) {
+            width: 33.33%;
+            max-width: 265px;
+            // padding-right: 30px;
+        }
+
+        &:last-child {
+            // padding-right: 0;
+        }
+    }
+
+    &__wgt {
+        padding-bottom: 15px;
+    }
+
+    &__wgt-head {
+        display: flex;
+        padding-bottom: 10px;
+    }
+
+    &__wgt-name {}
+
+    &__wgt-txt {}
+
+    &__wgt-line {}
+
+    &__wgt-bar {}
+}
