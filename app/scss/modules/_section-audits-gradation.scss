@@ -1,9 +1,31 @@
 .gradation-tabs {
-    &__list {}
+    &__list {
+        padding-bottom: 25px;
+    }
 
     &__item {}
 
-    &__link {}
+    &__link {
+        padding: 5px 0;
+        margin-right: 40px;
+        transition: all .5s;
+
+        &:hover {
+            color: #23D4DF;
+        }
+    }
+
+    &__link_theme_green {
+        color: #20D432;
+    }
+
+    &__link_theme_blue {
+        color: #2C8D94;
+    }
+
+    &__link_theme_red {
+        color: #A0534E;
+    }
 
     &__content {}
 
@@ -14,8 +36,52 @@
     }
 }
 
+.gradation-tabs__list .gradation-tabs__link.active {
+    background: transparent;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 60px;
+        bottom: 0;
+        right: 0;
+        margin-left: -30px;
+    }
+}
+
+.gradation-tabs__list .gradation-tabs__link_theme_green.active {
+    color: #20D432;
+
+    &::before {
+        background: #20D432;
+        border: 1px solid #20D432;
+    }
+}
+
+.gradation-tabs__list .gradation-tabs__link_theme_blue.active {
+    color: #2C8D94;
+
+    &::before {
+        background: #2C8D94;
+        border: 1px solid #2C8D94;
+    }
+}
+
+.gradation-tabs__list .gradation-tabs__link_theme_red.active {
+    color: #A0534E;
+
+    &::before {
+        background: #A0534E;
+        border: 1px solid #A0534E;
+    }
+}
+
 .gradation-head {
     display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
 
     &__title {
         font-weight: bold;
@@ -33,7 +99,7 @@
     }
 }
 
-.gradation-body {
+.bar-body {
     &__row {
         display: flex;
         flex-wrap: wrap;
@@ -46,11 +112,6 @@
         @media (min-width: 992px) {
             width: 33.33%;
             max-width: 265px;
-            // padding-right: 30px;
-        }
-
-        &:last-child {
-            // padding-right: 0;
         }
     }
 
@@ -67,7 +128,23 @@
 
     &__wgt-txt {}
 
-    &__wgt-line {}
+    &__wgt-line {
+        background: rgba(115, 136, 169, 0.353283);
+        border-radius: 9px;
+        height: 18px;
+    }
 
-    &__wgt-bar {}
+    &__wgt-bar {
+        font-weight: normal;
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+
+    &__wgt-bar_theme_green {
+        background-color: #20D432;
+    }
+
+    &__wgt-bar_theme_blue {
+        background-color: #23D4DF;
+    }
 }

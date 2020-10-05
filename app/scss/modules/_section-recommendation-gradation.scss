@@ -1,0 +1,40 @@
+.gradation-points {
+    display: flex;
+    padding-bottom: 25px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding-right: 25px;
+    }
+
+    &__point {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+    &__point_theme_blue {
+        background: #23D4DF;
+    }
+
+    &__point_theme_grey {
+        background: #C4DAE3;
+    }
+
+    &__txt {
+        font-size: 16px;
+        line-height: 22px;
+        color: #7C828A;
+    }
+}
+
+.gradation-body {
+    padding: 20px;
+
+    @media (min-width: 992px) {
+        padding: 25px;
+    }
+}
