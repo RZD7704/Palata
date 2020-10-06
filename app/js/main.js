@@ -8,6 +8,7 @@ hideBlock('.hidden-block__btn_first', '.hidden-block__wrapper_first');
 hideBlock('.hidden-block__btn_second', '.hidden-block__wrapper_second');
 hideBlock('.hidden-block__btn_third', '.hidden-block__wrapper_third');
 hideBlock('.hidden-block__btn_four', '.hidden-block__wrapper_four');
+hideBlock('.hidden-block__btn_five', '.hidden-block__wrapper_five');
 
 function addDoughnutChart(selector, dataArr, labelsArr, color) {
     var ctx = document.querySelector(selector);
