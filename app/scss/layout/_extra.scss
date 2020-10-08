@@ -248,6 +248,10 @@
         color: #7C828A;
     }
 
+    &__wgt-txt {
+        color: #20D432;
+    }
+
     &__wgt-name_theme_dark {
         color: #363636;
     }
@@ -271,4 +275,22 @@
     &__wgt-bar_theme_blue {
         background-color: #23D4DF;
     }
+}
+
+.btn-head {
+    display: block;
+
+    @media (min-width: 992px) {
+        display: none;
+    }
+}
+
+.chart-txt {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #23D4DF;
 }

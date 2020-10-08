@@ -7,12 +7,14 @@
 	<title>Document</title>
 
 	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
 
 	<div class="content">
 		<section class="section section-main">
@@ -39,79 +41,162 @@
 					</h2>
 				</div>
 
-				<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionInfo">
-					<div class="card-body">
-						<section class="section section-general">
-							<div class="container">
-								<div class="basic-head">
-									<h2 class="basic-title">Загальні дані</h2>
-									<p class="basic-subtitle">про рахункову палату</p>
-								</div>
-								<div class="general-content">
-									<div class="general-content__wgt basic-block">
-										<div class="general-chart"></div>
-										<div class="description-chart">
-											<div class="description-chart__item">
-												<div class="d-flex flex-column">
-													<div class="description-chart__title">
-														Дотримання строку розгляду
-													</div>
-													<div class="description-chart__subtitle">
-														1 місяць (Так)
-													</div>
+				<div id="collapseOne" class="collapse collapse-mob show" aria-labelledby="headingOne"
+					data-parent="#accordionInfo">
+					<!-- <div class="card-body"> -->
+					<section class="section section-general">
+						<div class="container">
+							<div class="basic-head" data-aos="fade-down">
+								<h2 class="basic-title">Загальні дані</h2>
+								<p class="basic-subtitle">про рахункову палату</p>
+							</div>
+							<div class="general-content">
+								<div class="general-content__wgt basic-block" data-aos="fade-right">
+									<div class="general-chart">
+										<canvas id="auditThinChart1" width="120" height="100"></canvas>
+									</div>
+									<div class="description-chart">
+										<div class="description-chart__item d-flex align-items-center justify-content-around justify-content-lg-start"
+											data-aos="zoom-out">
+											<div class="d-flex flex-column pr-0 pr-lg-2">
+												<div class="description-chart__title">
+													Дотримання строку розгляду
 												</div>
-												<div class="description-chart__subchart">
-
+												<div class="description-chart__subtitle">
+													1 місяць (Так)
 												</div>
 											</div>
-											<div class="description-chart__item">
-												<div class="d-flex flex-column">
-													<div class="description-chart__title">
-														Дотримання строку розгляду
-													</div>
-													<div class="description-chart__subtitle">
-														1 місяць (Так)
-													</div>
+											<div class="description-chart__subchart position-relative">
+												<canvas id="auditThinSubChart1" width="60" height="60"></canvas>
+												<p class="chart-txt">550</p>
+											</div>
+										</div>
+										<div class="description-chart__item d-flex align-items-center justify-content-around justify-content-lg-start"
+											data-aos="zoom-out">
+											<div class="d-flex flex-column pr-0 pr-lg-2">
+												<div class="description-chart__title">
+													Дотримання строку розгляду
 												</div>
-												<div class="description-chart__subchart">
+												<div class="description-chart__subtitle">
+													1 місяць (Так)
 												</div>
+											</div>
+											<div class="description-chart__subchart position-relative">
+												<canvas id="auditThinSubChart2" width="60" height="60"></canvas>
+												<p class="chart-txt">655</p>
 											</div>
 										</div>
 									</div>
-									<div class="general-content__wgt basic-block">
-										<div class="general-chart"></div>
-										<div class="basic-points">
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">інформація відсутня(320)</div>
+								</div>
+								<div class="general-content__wgt basic-block" data-aos="fade-left">
+									<div class="general-chart position-relative">
+										<canvas id="auditThinChart2" width="120" height="100"></canvas>
+										<p class="chart-txt">Виконання</p>
+									</div>
+									<div class="basic-points">
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
 											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">ні (240)</div>
+											<div class="basic-points__txt">інформація відсутня(320)</div>
+										</div>
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
 											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">так (35)</div>
+											<div class="basic-points__txt">ні (240)</div>
+										</div>
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
 											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">внесено в план (765)</div>
+											<div class="basic-points__txt">так (35)</div>
+										</div>
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
 											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">50/50 (787)</div>
+											<div class="basic-points__txt">внесено в план (765)</div>
+										</div>
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
 											</div>
+											<div class="basic-points__txt">50/50 (787)</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</section>
-					</div>
+						</div>
+					</section>
+
+					<section class="section section-general-smart">
+						<div class="container">
+							<div class="basic-head">
+								<h2 class="basic-title">Загальні дані</h2>
+							</div>
+							<div class="smart-body basic-block">
+								<div class="smart-body__wrapper">
+									<div class="smart-body__wgt" data-aos="zoom-in">
+										<div class="smart-body__chart circle-chart-wrap">
+											<div class="circle-chart" data-percent="60">
+												<div class="chart-box">
+													<div class="chart-circle-base"></div>
+													<svg>
+														<circle r="50%" cx="50%" cy="50%" class="chart-circle-progress"
+															stroke-width="14" stroke-linecap="round"></circle>
+													</svg>
+													<div class="per-num"><span>0</span>%</div>
+												</div>
+											</div>
+										</div>
+										<p class="smart-body__txt">Співвідношення реалістичності</p>
+									</div>
+									<div class="smart-body__wgt" data-aos="zoom-in">
+										<div class="smart-body__chart circle-chart-wrap">
+											<div class="circle-chart" data-percent="60">
+												<div class="chart-box">
+													<div class="chart-circle-base"></div>
+													<svg>
+														<circle r="50%" cx="50%" cy="50%" class="chart-circle-progress"
+															stroke-width="14" stroke-linecap="round"></circle>
+													</svg>
+													<div class="per-num"><span>0</span>%</div>
+												</div>
+											</div>
+										</div>
+										<p class="smart-body__txt">Співвідношення реалістичності</p>
+									</div>
+									<div class="smart-body__wgt" data-aos="zoom-in">
+										<div class="smart-body__chart circle-chart-wrap">
+											<div class="circle-chart" data-percent="60">
+												<div class="chart-box">
+													<div class="chart-circle-base"></div>
+													<svg>
+														<circle r="50%" cx="50%" cy="50%" class="chart-circle-progress"
+															stroke-width="14" stroke-linecap="round"></circle>
+													</svg>
+													<div class="per-num"><span>0</span>%</div>
+												</div>
+											</div>
+										</div>
+										<p class="smart-body__txt">Співвідношення реалістичності</p>
+									</div>
+									<div class="smart-body__wgt" data-aos="zoom-in">
+										<div class="smart-body__chart circle-chart-wrap">
+											<div class="circle-chart" data-percent="60">
+												<div class="chart-box">
+													<div class="chart-circle-base"></div>
+													<svg>
+														<circle r="50%" cx="50%" cy="50%" class="chart-circle-progress"
+															stroke-width="14" stroke-linecap="round"></circle>
+													</svg>
+													<div class="per-num"><span>0</span>%</div>
+												</div>
+											</div>
+										</div>
+										<p class="smart-body__txt">Співвідношення реалістичності</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- </div> -->
 				</div>
 			</div>
 			<div class="card">
@@ -123,7 +208,8 @@
 						</button>
 					</h2>
 				</div>
-				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionInfo">
+				<div id="collapseTwo" class="collapse collapse-mob" aria-labelledby="headingTwo"
+					data-parent="#accordionInfo">
 					<!-- <div class="card-body"> -->
 					<section class="section section-audits-charts">
 						<div class="container">
@@ -132,7 +218,7 @@
 									<div class="basic-head">
 										<h2 class="basic-title">Суб’єкти аудитів</h2>
 									</div>
-									<div class="audits-charts__content basic-block">
+									<div class="audits-charts__content basic-block" data-aos="zoom-in-right">
 										<div class="audits-charts__content-item audit-chart">
 											<canvas id="auditChart1" width="200" height="150"></canvas>
 										</div>
@@ -180,9 +266,11 @@
 									<div class="basic-head">
 										<h2 class="basic-title">Аудити</h2>
 									</div>
-									<div class="audits-charts__content basic-block">
-										<div class="audits-charts__content-item audit-chart">
+									<div class="audits-charts__content basic-block" data-aos="zoom-in-left">
+										<div class="audits-charts__content-item audit-chart position-relative">
 											<canvas id="auditChart2" width="200" height="150"></canvas>
+											<p class="chart-txt">90
+												Аудитів</p>
 										</div>
 										<div class="audits-charts__content-item basic-points">
 											<div class="basic-points__item">
@@ -245,7 +333,7 @@
 
 					<section class="section section-audits-tables section-audits-tables_recommendation">
 						<div class="container">
-							<div class="basic-head d-none d-lg-block">
+							<div class="basic-head d-none d-lg-block" data-aos="fade-down-right">
 								<h2 class="basic-title">Суб’єкти аудиту</h2>
 								<p class="basic-subtitle">та кількість рекомендацій</p>
 							</div>
@@ -258,45 +346,45 @@
 									<div class="hidden-block">
 										<div
 											class="basic-description basic-block audits-tables__block hidden-block__wrapper_first">
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Антимонопольний комітет</p>
 												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Мінекономрозвитку</p>
 												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Мінсоцполітики</p>
 												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Мінприроди</p>
 												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">КМУ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">МОЗ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
@@ -314,45 +402,45 @@
 									<div class="hidden-block">
 										<div
 											class="basic-description basic-block audits-tables__block hidden-block__wrapper_second">
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Антимонопольний комітет</p>
 												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Мінекономрозвитку</p>
 												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Мінсоцполітики</p>
 												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Мінприроди</p>
 												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">КМУ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">МОЗ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
@@ -369,11 +457,10 @@
 					<section class="section section-audits-deadlines">
 						<div class="container">
 							<div class="basic-head">
-								<h2 class="basic-title">Суб’єкти аудитів</h2>
-								<p class="basic-subtitle">та кількість рекомендацій</p>
+								<h2 class="basic-title">Строки та виконання </h2>
 							</div>
 							<div class="audits-deadlines basic-block">
-								<div class="audits-deadlines__wgt">
+								<div class="audits-deadlines__wgt" data-aos="fade-down">
 									<div class="deadlines-tabs">
 										<ul class="deadlines-tabs__nav nav nav-pills" id="kmu-tab" role="tablist">
 											<li class="deadlines-tabs__item nav-item" role="presentation">
@@ -446,9 +533,10 @@
 										</div>
 									</div>
 								</div>
-								<div class="audits-deadlines__wgt">
-									<div class="audits-deadlines-chart ">
+								<div class="audits-deadlines__wgt" data-aos="fade-up">
+									<div class="audits-deadlines-chart position-relative">
 										<canvas id="auditChart3" width="200" height="150"></canvas>
+										<p class="chart-txt">Виконання</p>
 									</div>
 									<div class="audits-deadlines-points basic-points">
 										<div class="basic-points__item">
@@ -485,7 +573,7 @@
 
 					<section class="section section-audits-tables section-audits-tables_days">
 						<div class="container">
-							<div class="basic-head d-none d-lg-block">
+							<div class="basic-head d-none d-lg-block" data-aos="fade-down-right">
 								<h2 class="basic-title">Суб’єкти аудиту</h2>
 								<p class="basic-subtitle">та кількість рекомендацій</p>
 							</div>
@@ -498,45 +586,45 @@
 									<div class="hidden-block">
 										<div
 											class="basic-description basic-block audits-tables__block hidden-block__wrapper_third">
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Антимонопольний комітет</p>
 												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Мінекономрозвитку</p>
 												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Мінсоцполітики</p>
 												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">Мінприроди</p>
 												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">КМУ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">МОЗ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-right">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
@@ -554,49 +642,49 @@
 									<div class="hidden-block">
 										<div
 											class="basic-description basic-block audits-tables__block hidden-block__wrapper_four">
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Антимонопольний комітет</p>
 												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Мінекономрозвитку</p>
 												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Мінсоцполітики</p>
 												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">Мінприроди</p>
 												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">КМУ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
 												</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">МОЗ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-											<div class="basic-description__wgt">
+											<div class="basic-description__wgt" data-aos="zoom-in-left">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
@@ -612,7 +700,7 @@
 
 					<section class="section section-audits-gradation">
 						<div class="container">
-							<div class="basic-head">
+							<div class="basic-head" data-aos="flip-left">
 								<h2 class="basic-title">Градація виконання рекомендацій</h2>
 							</div>
 							<div class="gradation-tabs">
@@ -647,7 +735,7 @@
 											<div class="bar-body">
 												<div class="bar-body__row">
 													<div class="bar-body__col">
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -659,7 +747,7 @@
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -671,7 +759,7 @@
 																	aria-valuemax="100">100%</div>
 															</div>
 														</div>
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -683,7 +771,7 @@
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -697,7 +785,7 @@
 														</div>
 													</div>
 													<div class="bar-body__col">
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -709,7 +797,7 @@
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -721,7 +809,7 @@
 																	aria-valuemax="100">100%</div>
 															</div>
 														</div>
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -735,7 +823,7 @@
 														</div>
 													</div>
 													<div class="bar-body__col">
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="gradation-body__wgt-txt">(20 виконано)</p>
@@ -747,7 +835,7 @@
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="bar-body__wgt">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="bar-body__wgt-txt">(20 виконано)</p>
@@ -769,118 +857,118 @@
 										<div class="gradation-tabs__block basic-block">
 											<div class="gradation-head">
 												<p class="gradation-head__title">Серед позитивних рекомендацій:</p>
-												<p class="gradation-head__txt">87% із 100%</p>
+												<p class="gradation-head__txt">77% із 100%</p>
 											</div>
-											<div class="gradation-body">
-												<div class="gradation-body__row">
-													<div class="gradation-body__col">
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+											<div class="bar-body">
+												<div class="bar-body__row">
+													<div class="bar-body__col">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 100%;"
 																	aria-valuenow="100" aria-valuemin="0"
 																	aria-valuemax="100">100%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
 													</div>
-													<div class="gradation-body__col">
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+													<div class="bar-body__col">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="v-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 100%;"
 																	aria-valuenow="100" aria-valuemin="0"
 																	aria-valuemax="100">100%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
 													</div>
-													<div class="gradation-body__col">
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
+													<div class="bar-body__col">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="gradation-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 100%;"
 																	aria-valuenow="100" aria-valuemin="0"
 																	aria-valuemax="100">100%</div>
@@ -896,118 +984,118 @@
 										<div class="gradation-tabs__block basic-block">
 											<div class="gradation-head">
 												<p class="gradation-head__title">Серед позитивних рекомендацій:</p>
-												<p class="gradation-head__txt">100% із 100%</p>
+												<p class="gradation-head__txt">87% із 100%</p>
 											</div>
-											<div class="gradation-body">
-												<div class="gradation-body__row">
-													<div class="gradation-body__col">
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+											<div class="bar-body">
+												<div class="bar-body__row">
+													<div class="bar-body__col">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 100%;"
 																	aria-valuenow="100" aria-valuemin="0"
 																	aria-valuemax="100">100%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
 													</div>
-													<div class="gradation-body__col">
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+													<div class="bar-body__col">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="v-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 100%;"
 																	aria-valuenow="100" aria-valuemin="0"
 																	aria-valuemax="100">100%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
 													</div>
-													<div class="gradation-body__col">
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
+													<div class="bar-body__col">
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
 																<p class="gradation-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 55%;"
 																	aria-valuenow="55" aria-valuemin="0"
 																	aria-valuemax="100">55%</div>
 															</div>
 														</div>
-														<div class="gradation-body__wgt">
-															<div class="gradation-body__wgt-head">
-																<p class="gradation-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+														<div class="bar-body__wgt" data-aos="zoom-in-down">
+															<div class="bar-body__wgt-head">
+																<p class="bar-body__wgt-name">ДСАУ</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
-															<div class="gradation-body__wgt-line progress">
-																<div class="gradation-body__wgt-bar gradation-body__wgt-bar_theme_green progress-bar"
+															<div class="bar-body__wgt-line progress">
+																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
 																	role="progressbar" style="width: 100%;"
 																	aria-valuenow="100" aria-valuemin="0"
 																	aria-valuemax="100">100%</div>
@@ -1034,7 +1122,8 @@
 						</button>
 					</h2>
 				</div>
-				<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionInfo">
+				<div id="collapseThree" class="collapse collapse-mob" aria-labelledby="headingThree"
+					data-parent="#accordionInfo">
 					<!-- <div class="card-body"> -->
 					<section class="section section-recommendation-quantity">
 						<div class="container">
@@ -1049,61 +1138,61 @@
 								<div class="quantity-body">
 									<div class="quantity-body__row">
 										<div class="quantity-body__col">
-											<div class="quantity-body__chart">
+											<div class="quantity-body__chart" data-aos="zoom-out-right">
 												<canvas id="recommendationQuantity" width="200" height="150"></canvas>
 											</div>
 										</div>
 										<div class="quantity-body__col d-none d-lg-block">
 											<div class="basic-points">
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Невідомий
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Невідомий
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div class="basic-points__point basic-points__point_theme_blue">
 													</div>
 													<div class="basic-points__txt">Майонер
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_dark-green">
 													</div>
 													<div class="basic-points__txt">Іванова
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_dark-green">
 													</div>
 													<div class="basic-points__txt">Іванова
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Богун
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Іванова
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
@@ -1114,55 +1203,55 @@
 										</div>
 										<div class="quantity-body__col d-none d-lg-block">
 											<div class="basic-points">
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Невідомий
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Невідомий
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div class="basic-points__point basic-points__point_theme_blue">
 													</div>
 													<div class="basic-points__txt">Майонер
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_dark-green">
 													</div>
 													<div class="basic-points__txt">Іванова
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_dark-green">
 													</div>
 													<div class="basic-points__txt">Іванова
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Богун
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
 													<div class="basic-points__txt">Іванова
 														<span class="basic-points__span">(269 рекомендацій)</span></div>
 												</div>
-												<div class="basic-points__item">
+												<div class="basic-points__item" data-aos="fade-up-left">
 													<div
 														class="basic-points__point basic-points__point_theme_heavy-blue">
 													</div>
@@ -1179,7 +1268,7 @@
 
 					<section class="section section-recommendation-implementation">
 						<div class="container">
-							<div class="basic-head">
+							<div class="basic-head" data-aos="flip-left">
 								<h2 class="basic-title">Виконання рекомендацій</h2>
 							</div>
 							<div class="implementation-tabs">
@@ -1210,7 +1299,7 @@
 								<div class="implementation-tabs__content tab-content" id="implementation-tabContent">
 									<div class="tab-pane fade show active" id="implementation-edite" role="tabpanel"
 										aria-labelledby="implementation-edite-tab">
-										<div class="recommendation-implementation basic-block">
+										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
 												<div class="implementation-head__num">1237</div>
@@ -1218,9 +1307,11 @@
 											<div class="implementation-body">
 												<div class="implementation-body__row">
 													<div class="implementation-body__col">
-														<div class="implementation-body__chart">
+														<div class="implementation-body__chart position-relative">
 															<canvas id="recommendationImplementation1" width="200"
 																height="150"></canvas>
+															<p class="chart-txt">Рекомендації
+																внесені в план</p>
 														</div>
 													</div>
 													<div class="implementation-body__col d-none d-lg-block">
@@ -1365,7 +1456,7 @@
 									</div>
 									<div class="tab-pane fade" id="implementation-not-performed" role="tabpanel"
 										aria-labelledby="implementation-not-performed-tab">
-										<div class="recommendation-implementation basic-block">
+										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
 												<div class="implementation-head__num">1237</div>
@@ -1520,7 +1611,7 @@
 									</div>
 									<div class="tab-pane fade" id="implementation-performed" role="tabpanel"
 										aria-labelledby="implementation-performed-tab">
-										<div class="recommendation-implementation basic-block">
+										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
 												<div class="implementation-head__num">1237</div>
@@ -1675,7 +1766,7 @@
 									</div>
 									<div class="tab-pane fade" id="implementation-fifty" role="tabpanel"
 										aria-labelledby="implementation-fifty-tab">
-										<div class="recommendation-implementation basic-block">
+										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
 												<div class="implementation-head__num">1237</div>
@@ -1830,7 +1921,7 @@
 									</div>
 									<div class="tab-pane fade" id="implementation-missing" role="tabpanel"
 										aria-labelledby="implementation-missing-tab">
-										<div class="recommendation-implementation basic-block">
+										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
 												<div class="implementation-head__num">1237</div>
@@ -1990,7 +2081,7 @@
 
 					<section class="section section-recommendation-gradation">
 						<div class="container">
-							<div class="basic-head pb-3">
+							<div class="basic-head pb-3" data-aos="flip-left">
 								<h2 class="basic-title">Градація виконання рекомендацій</h2>
 							</div>
 							<div class="gradation-points">
@@ -2009,7 +2100,7 @@
 								<div class="bar-body">
 									<div class="bar-body__row">
 										<div class="bar-body__col">
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2019,7 +2110,7 @@
 														aria-valuemin="0" aria-valuemax="100">55%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2029,7 +2120,7 @@
 														aria-valuemin="0" aria-valuemax="100">100%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2039,7 +2130,7 @@
 														aria-valuemin="0" aria-valuemax="100">55%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2051,7 +2142,7 @@
 											</div>
 										</div>
 										<div class="bar-body__col">
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2061,7 +2152,7 @@
 														aria-valuemin="0" aria-valuemax="100">55%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2071,7 +2162,7 @@
 														aria-valuemin="0" aria-valuemax="100">100%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2081,7 +2172,7 @@
 														aria-valuemin="0" aria-valuemax="100">55%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2093,7 +2184,7 @@
 											</div>
 										</div>
 										<div class="bar-body__col">
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2103,7 +2194,7 @@
 														aria-valuemin="0" aria-valuemax="100">55%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2113,7 +2204,7 @@
 														aria-valuemin="0" aria-valuemax="100">100%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2123,7 +2214,7 @@
 														aria-valuemin="0" aria-valuemax="100">100%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name">ДСАУ</p>
 												</div>
@@ -2145,7 +2236,7 @@
 							<div class="basic-head">
 								<h2 class="basic-title">Градація виконання рекомендацій</h2>
 							</div>
-							<div class="classification-body basic-block">
+							<div class="classification-body basic-block" data-aos="zoom-in">
 								<div class="classification-body__row">
 									<div class="classification-body__col">
 										<div class="classification-body__chart">
@@ -2244,7 +2335,7 @@
 								<div class="bar-body">
 									<div class="bar-body__row">
 										<div class="bar-body__col">
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2015</p>
 												</div>
@@ -2254,7 +2345,7 @@
 														aria-valuemin="0" aria-valuemax="100">55%</div>
 												</div>
 											</div>
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2018</p>
 												</div>
@@ -2266,7 +2357,7 @@
 											</div>
 										</div>
 										<div class="bar-body__col">
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2016</p>
 												</div>
@@ -2278,7 +2369,7 @@
 											</div>
 										</div>
 										<div class="bar-body__col">
-											<div class="bar-body__wgt">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
 													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2017</p>
 												</div>
@@ -2306,7 +2397,8 @@
 						</button>
 					</h2>
 				</div>
-				<div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionInfo">
+				<div id="collapseFour" class="collapse collapse-mob" aria-labelledby="headingFour"
+					data-parent="#accordionInfo">
 					<!-- <div class="card-body"> -->
 					<section class="section section-table-extract">
 						<div class="container">
@@ -2314,7 +2406,7 @@
 								<h2 class="basic-title">Витяг із повторно реалізованих програм</h2>
 							</div>
 							<div class="extract-body">
-								<table class="extract-body__table">
+								<table class="extract-body__table" data-aos="flip-left">
 									<tr>
 										<th class="extract-body__title">КВПКВК</th>
 										<th class="extract-body__title">Кількість повторів</th>
@@ -2351,7 +2443,7 @@
 								<h2 class="basic-title">Розподіл аудитів за обсягом перевірених бюджетних програм</h2>
 							</div>
 							<div class="amount-body">
-								<table class="amount-body__table d-none d-lg-block">
+								<table class="amount-body__table d-none d-lg-block" data-aos="flip-right">
 									<tr class="amount-body__line">
 										<th class="amount-body__title">Розпорядник</th>
 										<th class="amount-body__title">К-сть програм,
@@ -2401,7 +2493,7 @@
 								</table>
 							</div>
 						</div>
-						<div class="amount-body-mob d-lg-none">
+						<div class="amount-body-mob d-lg-none" data-aos="flip-right">
 							<div class="hidden-block">
 								<div class="hidden-block__wrapper_five">
 									<div class="amount-body-mob__wgt amount-body-mob__wgt_theme_light">
@@ -2541,7 +2633,7 @@
 							<div class="basic-head">
 								<h2 class="basic-title">Розподіл аудитів за обсягом перевірених бюджетних програм</h2>
 							</div>
-							<div class="types-body">
+							<div class="types-body" data-aos="flip-up">
 								<div class="types-body__wgt">
 									<div class="types-body__item">
 										<h3 class="types-body__name">Кількість звітів
@@ -2565,6 +2657,257 @@
 							</div>
 						</div>
 					</section>
+
+					<section class="section section-table-part">
+						<div class="container">
+							<div class="basic-head">
+								<h2 class="basic-title">Розподіл аудитів за часткою перевірених видатків</h2>
+							</div>
+							<div class="part-body">
+								<table class="part-body__table d-none d-lg-block" data-aos="zoom-in">
+									<tr class="part-body__line">
+										<th class="part-body__title">Розпорядник</th>
+										<th class="part-body__title">К-сть програм,
+											що потратили під аудит</th>
+										<th class="part-body__title">Всього програм</th>
+										<th class="part-body__title">% охоплених аудитом програм від заг. к-сті
+											програм (2018)</th>
+										<th class="part-body__title">% коштів, що припадає на розпорядника (2018)</th>
+									</tr>
+									<tr class="part-body__line">
+										<td class="part-body__txt part-body__txt_theme_grey">Національна комісія, що
+											здійснює державне регулювання у сфері ринків фінансових послуг</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
+									</tr>
+									<tr class="part-body__line">
+										<td class="part-body__txt part-body__txt_theme_grey">Вищий госодарський суд
+										</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
+									</tr>
+									<tr class="part-body__line">
+										<td class="part-body__txt part-body__txt_theme_grey">Національна комісія, що
+											здійснює державне регулювання у сфері ринків фінансових послуг</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
+									</tr>
+									<tr class="part-body__line">
+										<td class="part-body__txt part-body__txt_theme_grey">Вищий госодарський суд
+										</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
+										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
+									</tr>
+									<tr>
+										<td class="part-body__txt part-body__txt_theme_dark">Всього:</td>
+										<td class="part-body__txt part-body__txt_theme_dark text-center">110</td>
+										<td class="part-body__txt part-body__txt_theme_dark text-center">408</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="part-body-mob d-lg-none" data-aos="zoom-in">
+							<div class="hidden-block">
+								<div class="hidden-block__wrapper_five">
+									<div class="part-body-mob__wgt part-body-mob__wgt_theme_light">
+										<div class="container">
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Розпорядник</h3>
+												<p class="part-body-mob__txt">Національна комісія, що здійснює
+													державне
+													регулювання у сфері ринків фінансових послуг</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
+												</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Всього програм</h3>
+												<p class="apartmount-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
+													к-сті
+													програм (2018)</h3>
+												<p class="part-body-mob__txt text-center">100</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
+													(2018)
+												</h3>
+												<p class="part-body-mob__txt text-center">0,1</p>
+											</div>
+										</div>
+									</div>
+									<div class="part-body-mob__wgt part-body-mob__wgt_theme_grey">
+										<div class="container">
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Розпорядник</h3>
+												<p class="part-body-mob__txt">Національна комісія, що здійснює
+													державне
+													регулювання у сфері ринків фінансових послуг</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
+												</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Всього програм</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
+													к-сті
+													програм (2018)</h3>
+												<p class="part-body-mob__txt text-center">100</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
+													(2018)
+												</h3>
+												<p class="part-body-mob__txt text-center">0,1</p>
+											</div>
+										</div>
+									</div>
+									<div class="part-body-mob__wgt part-body-mob__wgt_theme_light">
+										<div class="container">
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Розпорядник</h3>
+												<p class="part-body-mob__txt">Національна комісія, що здійснює
+													державне
+													регулювання у сфері ринків фінансових послуг</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
+												</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Всього програм</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
+													к-сті
+													програм (2018)</h3>
+												<p class="part-body-mob__txt text-center">100</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
+													(2018)
+												</h3>
+												<p class="part-body-mob__txt text-center">0,1</p>
+											</div>
+										</div>
+									</div>
+									<div class="part-body-mob__wgt part-body-mob__wgt_theme_grey">
+										<div class="container">
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Розпорядник</h3>
+												<p class="part-body-mob__txt">Національна комісія, що здійснює
+													державне
+													регулювання у сфері ринків фінансових послуг</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
+												</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">Всього програм</h3>
+												<p class="part-body-mob__txt text-center">1</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
+													к-сті
+													програм (2018)</h3>
+												<p class="part-body-mob__txt text-center">100</p>
+											</div>
+											<div class="part-body-mob__item">
+												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
+													(2018)
+												</h3>
+												<p class="part-body-mob__txt text-center">0,1</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="hidden-block__btn-block">
+									<div class="hidden-block__btn hidden-block__btn_five">Більше</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="section section-table-earn">
+						<div class="container">
+							<div class="basic-head">
+								<h2 class="basic-title">Розподіл перевірених доходів за роком їх надходження до ДБ</h2>
+							</div>
+							<div class="earn-body basic-block">
+								<div class="bar-body">
+									<div class="bar-body__row">
+										<div class="bar-body__col">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2015</p>
+												</div>
+												<div class="bar-body__wgt-line progress">
+													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
+														role="progressbar" style="width: 55%;" aria-valuenow="55"
+														aria-valuemin="0" aria-valuemax="100">55%</div>
+												</div>
+											</div>
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2018</p>
+												</div>
+												<div class="bar-body__wgt-line progress">
+													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
+														role="progressbar" style="width: 100%;" aria-valuenow="100"
+														aria-valuemin="0" aria-valuemax="100">100%</div>
+												</div>
+											</div>
+										</div>
+										<div class="bar-body__col">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2016</p>
+												</div>
+												<div class="bar-body__wgt-line progress">
+													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
+														role="progressbar" style="width: 55%;" aria-valuenow="55"
+														aria-valuemin="0" aria-valuemax="100">55%</div>
+												</div>
+											</div>
+										</div>
+										<div class="bar-body__col">
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">2017</p>
+												</div>
+												<div class="bar-body__wgt-line progress">
+													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
+														role="progressbar" style="width: 90%;" aria-valuenow="90"
+														aria-valuemin="0" aria-valuemax="100">90%</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					<!-- </div> -->
 				</div>
 			</div>
@@ -2580,6 +2923,7 @@
 	</footer>
 
 	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
 	<script src="js/libs/bootstrap.min.js"></script>
 	<script src="js/libs/popper.min.js"></script>

@@ -1,0 +1,36 @@
+.smart-body {
+    padding: 20px 0;
+
+    @media (min-width:992px) {
+        padding: 25px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__wgt {
+        width: 100%;
+        padding-bottom: 35px;
+
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+
+        @media (min-width: 992px) {
+            width: 25%;
+            padding-bottom: 0;
+        }
+    }
+
+    &__chart {
+        padding-bottom: 20px;
+    }
+
+    &__txt {
+        text-align: center;
+        font-size: 18px;
+        color: #7C828A;
+    }
+}

@@ -12,6 +12,8 @@
 // Page styles
 @import "modules/_section-main";
 @import "modules/_section-general";
+@import "modules/_section-general-smart";
+@import "modules/_custom-donut";
 @import "modules/_section-audits-charts";
 @import "modules/_section-audits-tables";
 @import "modules/_section-audits-deadlines";
@@ -24,4 +26,7 @@
 @import "modules/_section-table-extract";
 @import "modules/_section-table-amount";
 @import "modules/_section-table-types";
+@import "modules/_section-table-part";
+@import "modules/_section-table-earn";
+@import "modules/_custom-donut";
 @import "modules/_footer";

@@ -17,4 +17,12 @@
             width: 25%;
         }
     }
+
+    &__chart {
+        margin-bottom: 35px;
+
+        @media (min-width: 992px) {
+            padding-bottom: 0;
+        }
+    }
 }

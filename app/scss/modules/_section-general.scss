@@ -7,6 +7,8 @@
     }
 
     &__wgt {
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
         padding: 25px 20px;
 
@@ -24,7 +26,23 @@
     }
 }
 
+.general-chart {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @media (min-width: 1200px) {
+        width: 40%;
+        padding-bottom: 0;
+    }
+}
+
 .description-chart {
+    width: 100%;
+
+    @media (min-width: 1200px) {
+        width: 60%;
+    }
+
     &__item {
         padding-bottom: 25px;
 
