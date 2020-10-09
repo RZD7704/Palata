@@ -1,0 +1,13 @@
+.hide-audits-recomendation {
+    &__blocks {
+        overflow: hidden;
+    }
+
+    &__block {}
+
+    &__btn {
+        position: relative;
+        z-index: 999;
+        background: #fff;
+    }
+}

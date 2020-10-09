@@ -1,4 +1,68 @@
 AOS.init();
+// Accordion animation 
+
+$(".accordion .card .btn-head").click(function() {
+    if( $(this).parents(".card").hasClass('active') ) {
+        $(this).parents(".card").removeClass('active');
+      } else {
+        $('.btn-head').parents(".card").removeClass('active');
+        $(this).parents(".card").addClass('active');
+      }
+    $('.accordion').removeClass('active');
+    $('.accordion').has('.card.active').addClass('active');
+ });
+
+//  if($(".accordion").find( $(".active") )) {
+//     console.log("this");
+// }
+//Hidden block
+
+// jQuery(document).ready(function () {
+//     $('.btn-accordion').on('click', function() {
+//         var btnTarget = jQuery(this).data('target');
+//     //   console.log(jQuery(btnTarget).find('.hide-audits-recomendation__blocks'));
+//       jQuery(btnTarget).find('.hide-audits-recomendation__blocks').addClass('active');
+//       openHeight(jQuery(btnTarget).find('.hide-audits-recomendation__blocks'), jQuery(btnTarget).find('.hide-audits-recomendation__block'), jQuery(btnTarget).find('.hide-audits-recomendation__btn-a'), 2);   
+//     });
+//     function openHeight(parent, children, btn, numElems) {
+//         var parentRules = jQuery(parent);
+//         var rulesBlock = jQuery(children);
+//         var readMoreBtn = jQuery(btn);
+//         var defaultHeight = jQuery(parentRules).height();
+
+//         var height = 0;
+
+//         jQuery(rulesBlock).each(function (index, elem) {
+//             height += jQuery(elem).outerHeight();
+
+//             if (index == numElems) {
+//                 return false;
+//             }
+
+//         });
+
+//         jQuery(parentRules).css('height', height);
+//         openClick(parentRules, readMoreBtn, defaultHeight, height);
+//     }
+//     function openClick(parent, btn, defaultHeight, height) {
+//         jQuery(btn).click(function (e) {
+//             e.preventDefault();
+//             if (jQuery(parent).hasClass('active')) {
+//                 jQuery(parent).removeClass('active');
+//                 jQuery(parent).animate({
+//                     height: height
+//                 }, 1000);
+//             } else {
+//                 jQuery(parent).addClass('active');
+//                 jQuery(parent).animate({
+//                     height: defaultHeight
+//                 }, 1000);
+//             }
+
+//         });
+//     }
+// });
+
 // Custon Donut
 function initCustomDonut() {
     var chart_circle,

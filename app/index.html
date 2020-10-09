@@ -34,14 +34,17 @@
 			<div class="card">
 				<div class="btn-head" id="headingOne">
 					<h2 class="mb-0">
-						<button class="btn-accordion btn-block" type="button" data-toggle="collapse"
+						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
 							data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 							Загальні дані
+							<svg class="btn-accordion__arr">
+								<use xlink:href="img/sprite.svg#arr-svg"></use>
+							</svg>
 						</button>
 					</h2>
 				</div>
 
-				<div id="collapseOne" class="collapse collapse-mob show" aria-labelledby="headingOne"
+				<div id="collapseOne" class="collapse collapse-mob" aria-labelledby="headingOne"
 					data-parent="#accordionInfo">
 					<!-- <div class="card-body"> -->
 					<section class="section section-general">
@@ -52,8 +55,10 @@
 							</div>
 							<div class="general-content">
 								<div class="general-content__wgt basic-block" data-aos="fade-right">
-									<div class="general-chart">
-										<canvas id="auditThinChart1" width="120" height="100"></canvas>
+									<div class="general-chart position-relative">
+										<canvas class="chart-donut" id="auditThinChart1" width="120" height="100"></canvas>
+										<p class="chart-txt">1237 
+											рекомендацій </p>
 									</div>
 									<div class="description-chart">
 										<div class="description-chart__item d-flex align-items-center justify-content-around justify-content-lg-start"
@@ -67,8 +72,8 @@
 												</div>
 											</div>
 											<div class="description-chart__subchart position-relative">
-												<canvas id="auditThinSubChart1" width="60" height="60"></canvas>
-												<p class="chart-txt">550</p>
+												<canvas class="chart-donut" id="auditThinSubChart1" width="60" height="60"></canvas>
+												<p class="chart-txt chart-txt_theme_dark">550</p>
 											</div>
 										</div>
 										<div class="description-chart__item d-flex align-items-center justify-content-around justify-content-lg-start"
@@ -82,15 +87,15 @@
 												</div>
 											</div>
 											<div class="description-chart__subchart position-relative">
-												<canvas id="auditThinSubChart2" width="60" height="60"></canvas>
-												<p class="chart-txt">655</p>
+												<canvas class="chart-donut" id="auditThinSubChart2" width="60" height="60"></canvas>
+												<p class="chart-txt chart-txt_theme_dark">655</p>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="general-content__wgt basic-block" data-aos="fade-left">
 									<div class="general-chart position-relative">
-										<canvas id="auditThinChart2" width="120" height="100"></canvas>
+										<canvas class="chart-donut" id="auditThinChart2" width="120" height="100"></canvas>
 										<p class="chart-txt">Виконання</p>
 									</div>
 									<div class="basic-points">
@@ -128,7 +133,7 @@
 					<section class="section section-general-smart">
 						<div class="container">
 							<div class="basic-head">
-								<h2 class="basic-title">Загальні дані</h2>
+								<h2 class="basic-title">Smart-оцінка</h2>
 							</div>
 							<div class="smart-body basic-block">
 								<div class="smart-body__wrapper">
@@ -205,6 +210,9 @@
 						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
 							data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 							Суб’єкти аудиту
+							<svg class="btn-accordion__arr">
+								<use xlink:href="img/sprite.svg#arr-svg"></use>
+							</svg>
 						</button>
 					</h2>
 				</div>
@@ -268,7 +276,7 @@
 									</div>
 									<div class="audits-charts__content basic-block" data-aos="zoom-in-left">
 										<div class="audits-charts__content-item audit-chart position-relative">
-											<canvas id="auditChart2" width="200" height="150"></canvas>
+											<canvas class="chart-donut" id="auditChart2" width="200" height="150"></canvas>
 											<p class="chart-txt">90
 												Аудитів</p>
 										</div>
@@ -343,58 +351,57 @@
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
 										<p class="basic-subtitle">та кількість рекомендацій</p>
 									</div>
-									<div class="hidden-block">
-										<div
-											class="basic-description basic-block audits-tables__block hidden-block__wrapper_first">
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+									<div class="basic-block audits-tables__block">
+										<div class="hide-audits-recomendation__blocks">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">Антимонопольний комітет</p>
 												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">Мінекономрозвитку</p>
 												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">Мінсоцполітики</p>
 												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
 												</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">Мінприроди</p>
 												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">КМУ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
 												</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">МОЗ</p>
 												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">МОН</p>
 												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
 											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
+											<div class="basic-description__wgt hide-audits-recomendation__block">
 												<p class="basic-description__headline">ДФС</p>
 												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 											</div>
-										</div>
-										<div class="hidden-block__btn-block d-lg-none">
-											<div class="hidden-block__btn hidden-block__btn_first">Більше</div>
 										</div>
 									</div>
+									<div class="hide-audits-recomendation__btn text-center d-lg-none">
+										<a class="hide-audits-recomendation__btn-a" href="#">Більше</a>
+									</div>
 								</div>
-								<div class="audits-tables__wgt">
+								 <div class="audits-tables__wgt">
 									<div class="basic-head d-lg-none">
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
 										<p class="basic-subtitle">та кількість рекомендацій</p>
@@ -449,7 +456,7 @@
 											<div class="hidden-block__btn hidden-block__btn_second">Більше</div>
 										</div>
 									</div>
-								</div>
+								</div> 
 							</div>
 						</div>
 					</section>
@@ -464,22 +471,22 @@
 									<div class="deadlines-tabs">
 										<ul class="deadlines-tabs__nav nav nav-pills" id="kmu-tab" role="tablist">
 											<li class="deadlines-tabs__item nav-item" role="presentation">
-												<a class="deadlines-tabs__link nav-link" id="not-kmu-tab"
-													data-toggle="pill" href="#not-kmu" role="tab"
-													aria-controls="not-kmu" aria-selected="false">(Без КМУ)</a>
-											</li>
-											<li class="deadlines-tabs__item nav-item" role="presentation">
 												<a class="deadlines-tabs__link nav-link active" id="has-kmu-tab"
 													data-toggle="pill" href="#has-kmu" role="tab"
 													aria-controls="has-kmu" aria-selected="true">(З КМУ)</a>
 											</li>
+											<li class="deadlines-tabs__item nav-item" role="presentation">
+												<a class="deadlines-tabs__link nav-link" id="not-kmu-tab"
+													data-toggle="pill" href="#not-kmu" role="tab"
+													aria-controls="not-kmu" aria-selected="false">(Без КМУ)</a>
+											</li>
 										</ul>
 										<div class="deadlines-tabs__content tab-content" id="kmu-tabContent">
-											<div class="tab-pane fade show active" id="has-kmu" role="tabpanel"
-												aria-labelledby="has-kmu-tab">
+											<div class="tab-pane fade" id="not-kmu" role="tabpanel"
+												aria-labelledby="not-kmu-tab">
 												<div class="deadlines-tabs__content-wrapper">
 													<div class="deadlines-tabs__content-item">
-														<canvas id="auditChartKmu1" width="200" height="150"></canvas>
+														<canvas id="auditChartKmu2" width="120" height="100"></canvas>
 													</div>
 													<div class="deadlines-tabs__content-item">
 														<div class="deadlines-tabs__content-title">Дотримання місячного
@@ -502,12 +509,11 @@
 													</div>
 												</div>
 											</div>
-
-											<div class="tab-pane fade" id="not-kmu" role="tabpanel"
-												aria-labelledby="not-kmu-tab">
+											<div class="tab-pane fade show active" id="has-kmu" role="tabpanel"
+												aria-labelledby="has-kmu-tab">
 												<div class="deadlines-tabs__content-wrapper">
 													<div class="deadlines-tabs__content-item">
-														<canvas id="auditChartKmu2" width="200" height="150"></canvas>
+														<canvas id="auditChartKmu1" width="120" height="100"></canvas>
 													</div>
 													<div class="deadlines-tabs__content-item">
 														<div class="deadlines-tabs__content-title">Дотримання місячного
@@ -535,7 +541,7 @@
 								</div>
 								<div class="audits-deadlines__wgt" data-aos="fade-up">
 									<div class="audits-deadlines-chart position-relative">
-										<canvas id="auditChart3" width="200" height="150"></canvas>
+										<canvas class="chart-donut" id="auditChart3" width="120" height="100"></canvas>
 										<p class="chart-txt">Виконання</p>
 									</div>
 									<div class="audits-deadlines-points basic-points">
@@ -575,13 +581,13 @@
 						<div class="container">
 							<div class="basic-head d-none d-lg-block" data-aos="fade-down-right">
 								<h2 class="basic-title">Суб’єкти аудиту</h2>
-								<p class="basic-subtitle">та кількість рекомендацій</p>
+								<p class="basic-subtitle">та середня кількість днів для реагування</p>
 							</div>
 							<div class="audits-tables">
 								<div class="audits-tables__wgt">
 									<div class="basic-head d-lg-none">
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
-										<p class="basic-subtitle">та кількість рекомендацій</p>
+										<p class="basic-subtitle">та середня кількість днів для реагування</p>
 									</div>
 									<div class="hidden-block">
 										<div
@@ -637,7 +643,7 @@
 								<div class="audits-tables__wgt">
 									<div class="basic-head d-lg-none">
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
-										<p class="basic-subtitle">та кількість рекомендацій</p>
+										<p class="basic-subtitle">та середня кількість днів для реагування</p>
 									</div>
 									<div class="hidden-block">
 										<div
@@ -826,7 +832,7 @@
 														<div class="bar-body__wgt" data-aos="zoom-in-down">
 															<div class="bar-body__wgt-head">
 																<p class="bar-body__wgt-name">ДСАУ</p>
-																<p class="gradation-body__wgt-txt">(20 виконано)</p>
+																<p class="bar-body__wgt-txt">(20 виконано)</p>
 															</div>
 															<div class="bar-body__wgt-line progress">
 																<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
@@ -1119,6 +1125,9 @@
 						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
 							data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 							Виконання рекомендацій
+							<svg class="btn-accordion__arr">
+								<use xlink:href="img/sprite.svg#arr-svg"></use>
+							</svg>
 						</button>
 					</h2>
 				</div>
@@ -1308,7 +1317,7 @@
 												<div class="implementation-body__row">
 													<div class="implementation-body__col">
 														<div class="implementation-body__chart position-relative">
-															<canvas id="recommendationImplementation1" width="200"
+															<canvas class="chart-donut" id="recommendationImplementation1" width="200"
 																height="150"></canvas>
 															<p class="chart-txt">Рекомендації
 																внесені в план</p>
@@ -1459,14 +1468,16 @@
 										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
-												<div class="implementation-head__num">1237</div>
+												<div class="implementation-head__num">2237</div>
 											</div>
 											<div class="implementation-body">
 												<div class="implementation-body__row">
 													<div class="implementation-body__col">
-														<div class="implementation-body__chart">
-															<canvas id="recommendationImplementation2" width="200"
+														<div class="implementation-body__chart position-relative">
+															<canvas class="chart-donut" id="recommendationImplementation2" width="200"
 																height="150"></canvas>
+																<p class="chart-txt">Рекомендації
+																	внесені в план</p>
 														</div>
 													</div>
 													<div class="implementation-body__col d-none d-lg-block">
@@ -1614,14 +1625,16 @@
 										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
-												<div class="implementation-head__num">1237</div>
+												<div class="implementation-head__num">3237</div>
 											</div>
 											<div class="implementation-body">
 												<div class="implementation-body__row">
 													<div class="implementation-body__col">
-														<div class="implementation-body__chart">
-															<canvas id="recommendationImplementation3" width="200"
+														<div class="implementation-body__chart position-relative">
+															<canvas class="chart-donut" id="recommendationImplementation3" width="200"
 																height="150"></canvas>
+																<p class="chart-txt">Рекомендації
+																	внесені в план</p>
 														</div>
 													</div>
 													<div class="implementation-body__col d-none d-lg-block">
@@ -1769,14 +1782,16 @@
 										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
-												<div class="implementation-head__num">1237</div>
+												<div class="implementation-head__num">4237</div>
 											</div>
 											<div class="implementation-body">
 												<div class="implementation-body__row">
 													<div class="implementation-body__col">
-														<div class="implementation-body__chart">
-															<canvas id="recommendationImplementation4" width="200"
+														<div class="implementation-body__chart position-relative">
+															<canvas class="chart-donut" id="recommendationImplementation4" width="200"
 																height="150"></canvas>
+																<p class="chart-txt">Рекомендації
+																	внесені в план</p>
 														</div>
 													</div>
 													<div class="implementation-body__col d-none d-lg-block">
@@ -1924,14 +1939,16 @@
 										<div class="recommendation-implementation basic-block" data-aos="zoom-out">
 											<div class="implementation-head">
 												<h3 class="implementation-head__title">Усього рекомендацій: </h3>
-												<div class="implementation-head__num">1237</div>
+												<div class="implementation-head__num">5237</div>
 											</div>
 											<div class="implementation-body">
 												<div class="implementation-body__row">
 													<div class="implementation-body__col">
-														<div class="implementation-body__chart">
-															<canvas id="recommendationImplementation5" width="200"
+														<div class="implementation-body__chart position-relative">
+															<canvas class="chart-donut" id="recommendationImplementation5" width="200"
 																height="150"></canvas>
+																<p class="chart-txt">Рекомендації
+																	внесені в план</p>
 														</div>
 													</div>
 													<div class="implementation-body__col d-none d-lg-block">
@@ -2234,7 +2251,7 @@
 					<section class="section section-recommendation-classification">
 						<div class="container">
 							<div class="basic-head">
-								<h2 class="basic-title">Градація виконання рекомендацій</h2>
+								<h2 class="basic-title">Класифікація рекомендацій</h2>
 							</div>
 							<div class="classification-body basic-block" data-aos="zoom-in">
 								<div class="classification-body__row">
@@ -2394,6 +2411,9 @@
 						<button class="btn-accordion btn-block collapsed" type="button" data-toggle="collapse"
 							data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
 							Реалізація програм
+							<svg class="btn-accordion__arr">
+								<use xlink:href="img/sprite.svg#arr-svg"></use>
+							</svg>
 						</button>
 					</h2>
 				</div>
@@ -2631,7 +2651,7 @@
 					<section class="section section-table-types">
 						<div class="container">
 							<div class="basic-head">
-								<h2 class="basic-title">Розподіл аудитів за обсягом перевірених бюджетних програм</h2>
+								<h2 class="basic-title">Розподіл аудитів за видом предмету дослідження</h2>
 							</div>
 							<div class="types-body" data-aos="flip-up">
 								<div class="types-body__wgt">
@@ -2908,6 +2928,90 @@
 							</div>
 						</div>
 					</section>
+
+					<!-- <section>
+						<div class="container">
+							<div class="hide-audits-recomendation__blocks">
+								<div class="hide-audits-recomendation__block d-flex pb-3">
+									<div class="row">
+										<div class="col-2 col-md-1 d-flex justify-content-center">
+											<div class="points">
+												<div class="points--p">1</div>
+											</div>
+										</div>
+										<div class="col-10 col-md-11">
+											<div class="rules-content">
+												<p class="rules-content--p">Идейные соображения высшего порядка, а также широким активом влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+								<div class="hide-audits-recomendation__block d-flex pb-3">
+									<div class="row">
+										<div class="col-2 col-md-1 d-flex justify-content-center">
+											<div class="points">
+												<div class="points--p">2</div>
+											</div>
+										</div>
+										<div class="col-10 col-md-11">
+											<div class="rules-content">
+												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+								<div class="hide-audits-recomendation__block d-flex pb-3">
+									<div class="row">
+										<div class="col-2 col-md-1 d-flex justify-content-center">
+											<div class="points">
+												<div class="points--p">3</div>
+											</div>
+										</div>
+										<div class="col-10 col-md-11">
+											<div class="rules-content">
+												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+								<div class="hide-audits-recomendation__block d-flex pb-3">
+									<div class="row">
+										<div class="col-2 col-md-1 d-flex justify-content-center">
+											<div class="points">
+												<div class="points--p">4</div>
+											</div>
+										</div>
+										<div class="col-10 col-md-11">
+											<div class="rules-content">
+												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+			
+								<div class="hide-audits-recomendation__block d-flex pb-3">
+									<div class="row">
+										<div class="col-2 col-md-1 d-flex justify-content-center">
+											<div class="points">
+												<div class="points--p">5</div>
+											</div>
+										</div>
+										<div class="col-10 col-md-11">
+											<div class="rules-content">
+												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="hide-audits-recomendation__btn text-center">
+								<a class="hide-audits-recomendation__btn-a" href="#">Більше</a>
+							</div>
+						</div>
+					</section> -->
 					<!-- </div> -->
 				</div>
 			</div>

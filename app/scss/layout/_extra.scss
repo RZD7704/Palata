@@ -2,6 +2,19 @@
     border: none
 }
 
+.accordion {
+    @media (max-width:991px) {
+        position: relative;
+        top: 25%;
+    }
+
+}
+
+.accordion.active {
+    transition: all 0.5s;
+    top: 0;
+}
+
 .section {
     padding-bottom: 15px;
 }
@@ -14,6 +27,9 @@
 }
 
 .btn-accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-weight: 500;
     font-size: 20px;
     color: #23D4DF;
@@ -24,7 +40,29 @@
     &:focus {
         outline: none;
     }
+
+    &__arr {
+        width: 25px;
+        height: 20px;
+        margin-top: 10px;
+        opacity: 1;
+        z-index: 3;
+        transform: translate(0%, 0%);
+        // display: block;
+        // transition: all .8s linear;
+    }
 }
+
+.btn-accordion.collapsed .btn-accordion__arr {
+    opacity: 0;
+    position: absolute;
+    transform: translate(0%, -50%);
+    z-index: -1;
+    transition: all 0.5s ease-out;
+    // display: none;
+}
+
+
 
 .basic-head {
     padding-top: 50px;
@@ -293,4 +331,15 @@
     transform: translate(-50%, -50%);
     font-size: 16px;
     color: #23D4DF;
+    z-index: 4;
+}
+
+.chart-txt_theme_dark {
+    font-weight: bold;
+    color: #000000;
+}
+
+.chart-donut {
+    position: relative;
+    z-index: 5;
 }
