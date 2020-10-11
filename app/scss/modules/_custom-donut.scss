@@ -1,3 +1,31 @@
+.circle-chart {
+    &:hover .circle-chart__popup {
+        opacity: 1;
+    }
+
+    &__popup {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+        box-shadow: 0px 1px 8px rgba(83, 85, 155, 0.176);
+        border-radius: 4px;
+        opacity: 0;
+        transition: all .3s ease-in;
+    }
+
+    &__popup-txt {
+        font-size: 16px;
+        color: #000000;
+        padding: 5px 10px;
+    }
+
+    &__popup-txt_type_subchart {
+        font-size: 12px;
+    }
+}
+
 .circle-chart-wrap {
     text-align: center;
 }
@@ -20,10 +48,19 @@
     opacity: 0;
 }
 
+.circle-chart_type_subchart {
+    width: 60px;
+    height: 60px;
+}
+
 .circle-chart .chart-box {
     width: 100%;
     height: 100%;
     padding: 7px;
+}
+
+.circle-chart_type_subchart .chart-box_type_subchart {
+    padding: 3px;
 }
 
 .circle-chart .chart-circle-base {
@@ -34,6 +71,10 @@
     bottom: 0;
     border: 14px solid #ddd;
     border-radius: 50%;
+}
+
+.circle-chart_type_subchart .chart-circle-base_type_subchart {
+    border: 7px solid #ddd;
 }
 
 .circle-chart .chart-box svg {
@@ -50,6 +91,14 @@
     stroke: #7661cf;
 }
 
+.chart-circle-progress_theme_blue {
+    stroke: #23D4DF;
+}
+
+.chart-circle-progress_type_subchart {
+    stroke-width: 7;
+}
+
 .circle-chart .per-num {
     width: 100%;
     margin: -17px 0 0;
@@ -62,8 +111,22 @@
     top: 50%;
 }
 
+.circle-chart .per-num_theme_dark {
+    color: #000000;
+}
+
+.circle-chart_type_subchart .per-num_type_subchart {
+    font-size: 15px;
+    top: 60%;
+}
+
 .circle-chart .per-num span {
     font-size: 25px;
+    vertical-align: -1px;
+}
+
+.circle-chart_type_subchart .per-num_type_subchart span {
+    font-size: 15px;
     vertical-align: -1px;
 }
 
