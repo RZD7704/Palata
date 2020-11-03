@@ -1,5 +1,5 @@
 AOS.init();
-// Accordion animation 
+// Accordion animation
 
 $(".accordion .card .btn-head").click(function() {
     if( $(this).parents(".card").hasClass('active') ) {
@@ -12,56 +12,55 @@ $(".accordion .card .btn-head").click(function() {
     $('.accordion').has('.card.active').addClass('active');
  });
 
-//  if($(".accordion").find( $(".active") )) {
-//     console.log("this");
-// }
-//Hidden block
+$('.btn-accordion').click(function(e){
+  var auditBlocks = $($(this).data('target')).find('.hide-block'),
+    mainTable = $('.hide-block-parent_main-table'),
+    bigTable = $('.hide-block-parent_big-table');
+  if($(auditBlocks).length > 0){
+    var heightArr = [];
+  $($(this).data('target')).on('shown.bs.collapse', function () {
+  $( auditBlocks ).each(function( index, elem ) {
+    heightArr.push($(elem).height());
+            var height = 0;
+            jQuery(elem).find('.hide-block__wgt').each(function (index, elem) {
+                height += jQuery(elem).outerHeight();
+                if (mainTable) {
+                    if (index == 2) {
+                        return false;
+                    }
+                }
+                if (bigTable) {
+                    if (index == 1) {
+                        return false;
+                    }
+                }
+            });
+            jQuery(elem).css({'height': height + 20, 'overflow': 'hidden'});
+            openClick(auditBlocks, $(elem).closest('.hide-block-parent_main-table').find('.hide-block'), $(elem).closest('.hide-block-parent_main-table').find('.hidden-block__btn'), heightArr, height);  
+            openClick(auditBlocks, $(elem).closest('.hide-block-parent_big-table').find('.hide-block'), $(elem).closest('.hide-block-parent_big-table').find('.hidden-block__btn'), heightArr, height);  
+        });
+    });
+  }
+});
 
-// jQuery(document).ready(function () {
-//     $('.btn-accordion').on('click', function() {
-//         var btnTarget = jQuery(this).data('target');
-//     //   console.log(jQuery(btnTarget).find('.hide-audits-recomendation__blocks'));
-//       jQuery(btnTarget).find('.hide-audits-recomendation__blocks').addClass('active');
-//       openHeight(jQuery(btnTarget).find('.hide-audits-recomendation__blocks'), jQuery(btnTarget).find('.hide-audits-recomendation__block'), jQuery(btnTarget).find('.hide-audits-recomendation__btn-a'), 2);   
-//     });
-//     function openHeight(parent, children, btn, numElems) {
-//         var parentRules = jQuery(parent);
-//         var rulesBlock = jQuery(children);
-//         var readMoreBtn = jQuery(btn);
-//         var defaultHeight = jQuery(parentRules).height();
+function openClick(blocks, parent, btn, defaultHeight, height) {
+    jQuery(btn).click(function (e) {
+        e.preventDefault();
+        var index = $(blocks).index(parent);
+        if (jQuery(parent).hasClass('active')) {
+            jQuery(parent).removeClass('active');
+            jQuery(parent).animate({
+                height: height + 20
+            }, 1000);
+        } else {
+            jQuery(parent).addClass('active');
+            jQuery(parent).animate({
+                height: defaultHeight[index] + 30
+            }, 1000);
+        }
 
-//         var height = 0;
-
-//         jQuery(rulesBlock).each(function (index, elem) {
-//             height += jQuery(elem).outerHeight();
-
-//             if (index == numElems) {
-//                 return false;
-//             }
-
-//         });
-
-//         jQuery(parentRules).css('height', height);
-//         openClick(parentRules, readMoreBtn, defaultHeight, height);
-//     }
-//     function openClick(parent, btn, defaultHeight, height) {
-//         jQuery(btn).click(function (e) {
-//             e.preventDefault();
-//             if (jQuery(parent).hasClass('active')) {
-//                 jQuery(parent).removeClass('active');
-//                 jQuery(parent).animate({
-//                     height: height
-//                 }, 1000);
-//             } else {
-//                 jQuery(parent).addClass('active');
-//                 jQuery(parent).animate({
-//                     height: defaultHeight
-//                 }, 1000);
-//             }
-
-//         });
-//     }
-// });
+    });
+}
 
 // Custon Donut
 function initCustomDonut() {
@@ -139,6 +138,7 @@ function initCustomDonut() {
     chart_circle.call();
 }
 initCustomDonut();
+
 // Accordion
 
 function hideAccordion() {
@@ -163,19 +163,31 @@ $(window).resize(function () {
 
 findWidth();
 
-// Donuts
+//Doughnut objects
 
-function hideBlock(btn, wrap) {
-    $(btn).on('click', function () {
-        $(wrap).toggleClass('-expanded');
-    });
+var auditSubjects = {
+    values:[69, 15, 13, 10, 5, 3],
+    names: ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'],
+    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)']
+};
+var auditPoint1 = {
+    values:[51, 15, 13, 10, 10, 1, 20],
+    names: ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ', '3 МКЛ'],
+    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)', 'rgba(12, 218, 232, 0.8)']
+};
+
+function addDoughnutPoints (parent, values, names, colors) {
+    for (let i = 0; i < values.length; i++) {
+        $(`<div class="basic-points__item">
+            <div class="basic-points__point" style="background-color:${colors[i]}"></div>
+            <div class="basic-points__txt">${names[i]}(${values[i]})</div>
+        </div>`).appendTo(parent);
+    }
 }
 
-hideBlock('.hidden-block__btn_first', '.hidden-block__wrapper_first');
-hideBlock('.hidden-block__btn_second', '.hidden-block__wrapper_second');
-hideBlock('.hidden-block__btn_third', '.hidden-block__wrapper_third');
-hideBlock('.hidden-block__btn_four', '.hidden-block__wrapper_four');
-hideBlock('.hidden-block__btn_five', '.hidden-block__wrapper_five');
+addDoughnutPoints('#pointsID', auditSubjects.values, auditSubjects.names, auditSubjects.colors);
+addDoughnutPoints('#auditPoint1', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
+addDoughnutPoints('#auditPoint2', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
 
 function addDoughnutChart(selector, dataArr, labelsArr, color) {
     var ctx = document.querySelector(selector);
@@ -223,9 +235,9 @@ function addThinDoughnutChart(selector, dataArr, labelsArr, color) {
     });
 }
 
-addDoughnutChart('#auditChart1', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)']);
+addDoughnutChart('#auditChart1', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
 
-addDoughnutChart('#auditChart2', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)']);
+addDoughnutChart('#auditChart2', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
 
 addDoughnutChart('#auditChart3', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)']);
 
@@ -247,10 +259,8 @@ addDoughnutChart('#recommendationImplementation5', [51, 15, 13, 10, 10, 1], ['Ц
 
 addDoughnutChart('#recommendationClassification', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
 
+addDoughnutChart('#recommendationExtract', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
+
 addThinDoughnutChart('#auditThinChart1', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
 
-addThinDoughnutChart('#auditThinChart2', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-addThinDoughnutChart('#auditThinSubChart1', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-addThinDoughnutChart('#auditThinSubChart2', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
+addThinDoughnutChart('#auditThinChart2', auditSubjects.values, auditSubjects.names, auditSubjects.colors);

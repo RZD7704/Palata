@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="uk">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Розрахункова Палата</title>
 
+	<link rel="icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/libs/bootstrap.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/libs/aos.css">
+	<link rel="stylesheet" href="css/libs/Chart.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
-
-
 	<div class="content">
 		<section class="section section-main">
 			<div class="main-bg"></div>
@@ -43,10 +39,8 @@
 						</button>
 					</h2>
 				</div>
-
 				<div id="collapseOne" class="collapse collapse-mob" aria-labelledby="headingOne"
 					data-parent="#accordionInfo">
-					<!-- <div class="card-body"> -->
 					<section class="section section-general">
 						<div class="container">
 							<div class="basic-head" data-aos="fade-down">
@@ -57,7 +51,7 @@
 								<div class="general-content__wgt basic-block" data-aos="fade-right">
 									<div class="general-chart position-relative">
 										<canvas class="chart-donut" id="auditThinChart1" width="120" height="100"></canvas>
-										<p class="chart-txt">1237 
+										<p class="chart-txt">1237
 											рекомендацій </p>
 									</div>
 									<div class="description-chart">
@@ -120,42 +114,16 @@
 									</div>
 								</div>
 								<div class="general-content__wgt basic-block" data-aos="fade-left">
-									<div class="general-chart position-relative">
+									<div class="general-chart position-relative chart-max-height">
 										<canvas class="chart-donut" id="auditThinChart2" width="120" height="100"></canvas>
 										<p class="chart-txt">Виконання</p>
 									</div>
-									<div class="basic-points">
-										<div class="basic-points__item">
-											<div class="basic-points__point basic-points__point_theme_heavy-blue">
-											</div>
-											<div class="basic-points__txt">інформація відсутня(320)</div>
-										</div>
-										<div class="basic-points__item">
-											<div class="basic-points__point basic-points__point_theme_heavy-blue">
-											</div>
-											<div class="basic-points__txt">ні (240)</div>
-										</div>
-										<div class="basic-points__item">
-											<div class="basic-points__point basic-points__point_theme_heavy-blue">
-											</div>
-											<div class="basic-points__txt">так (35)</div>
-										</div>
-										<div class="basic-points__item">
-											<div class="basic-points__point basic-points__point_theme_heavy-blue">
-											</div>
-											<div class="basic-points__txt">внесено в план (765)</div>
-										</div>
-										<div class="basic-points__item">
-											<div class="basic-points__point basic-points__point_theme_heavy-blue">
-											</div>
-											<div class="basic-points__txt">50/50 (787)</div>
-										</div>
+									<div id="pointsID" class="basic-points">
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-general-smart">
 						<div class="container">
 							<div class="basic-head">
@@ -239,7 +207,6 @@
 							</div>
 						</div>
 					</section>
-					<!-- </div> -->
 				</div>
 			</div>
 			<div class="card">
@@ -256,7 +223,6 @@
 				</div>
 				<div id="collapseTwo" class="collapse collapse-mob" aria-labelledby="headingTwo"
 					data-parent="#accordionInfo">
-					<!-- <div class="card-body"> -->
 					<section class="section section-audits-charts">
 						<div class="container">
 							<div class="audits-charts">
@@ -265,46 +231,10 @@
 										<h2 class="basic-title">Суб’єкти аудитів</h2>
 									</div>
 									<div class="audits-charts__content basic-block" data-aos="zoom-in-right">
-										<div class="audits-charts__content-item audit-chart">
+										<div class="audits-charts__content-item audit-chart chart-max-height">
 											<canvas id="auditChart1" width="200" height="150"></canvas>
 										</div>
-										<div class="audits-charts__content-item basic-points">
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Виконавча влада (913)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_blue">
-												</div>
-												<div class="basic-points__txt">Правоохоронці (34)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_pink">
-												</div>
-												<div class="basic-points__txt">ОДА, КМДА (125)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_bright-green">
-												</div>
-												<div class="basic-points__txt">Держ підприємства та
-													установи (43)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_light-green">
-												</div>
-												<div class="basic-points__txt">Місцеве самоврядування (21)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_dark-green">
-												</div>
-												<div class="basic-points__txt">Суди (27)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_grey">
-												</div>
-												<div class="basic-points__txt">Інші (74)</div>
-											</div>
+										<div id="auditPoint1" class="audits-charts__content-item basic-points">
 										</div>
 									</div>
 								</div>
@@ -313,70 +243,18 @@
 										<h2 class="basic-title">Аудити</h2>
 									</div>
 									<div class="audits-charts__content basic-block" data-aos="zoom-in-left">
-										<div class="audits-charts__content-item audit-chart position-relative">
+										<div class="audits-charts__content-item audit-chart position-relative chart-max-height">
 											<canvas class="chart-donut" id="auditChart2" width="200" height="150"></canvas>
 											<p class="chart-txt">90
 												Аудитів</p>
 										</div>
-										<div class="audits-charts__content-item basic-points">
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Виконавча влада (913)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_blue">
-												</div>
-												<div class="basic-points__txt">Правоохоронці (34)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_pink">
-												</div>
-												<div class="basic-points__txt">ОДА, КМДА (125)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_bright-green">
-												</div>
-												<div class="basic-points__txt">Держ підприємства та
-													установи (43)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_light-green">
-												</div>
-												<div class="basic-points__txt">Місцеве самоврядування (21)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_dark-green">
-												</div>
-												<div class="basic-points__txt">Суди (27)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_grey">
-												</div>
-												<div class="basic-points__txt">Інші (74)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_grey">
-												</div>
-												<div class="basic-points__txt">Інші (74)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_grey">
-												</div>
-												<div class="basic-points__txt">Інші (74)</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_grey">
-												</div>
-												<div class="basic-points__txt">Інші (74)</div>
-											</div>
+										<div id="auditPoint2" class="audits-charts__content-item basic-points">
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-audits-tables section-audits-tables_recommendation">
 						<div class="container">
 							<div class="basic-head d-none d-lg-block" data-aos="fade-down-right">
@@ -384,121 +262,117 @@
 								<p class="basic-subtitle">та кількість рекомендацій</p>
 							</div>
 							<div class="audits-tables">
-								<div class="audits-tables__wgt">
+								<div class="audits-tables__wgt hide-block-parent hide-block-parent_main-table">
 									<div class="basic-head d-lg-none">
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
 										<p class="basic-subtitle">та кількість рекомендацій</p>
 									</div>
-									<div class="basic-block audits-tables__block">
-										<div class="hide-audits-recomendation__blocks">
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">Антимонопольний комітет</p>
-												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">Мінекономрозвитку</p>
-												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">Мінсоцполітики</p>
-												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
-												</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">Мінприроди</p>
-												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">КМУ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
-												</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">МОЗ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt hide-audits-recomendation__block">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
+									<div
+										class="basic-description basic-block audits-tables__block hide-block">
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Антимонопольний комітет</p>
+											<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінекономрозвитку</p>
+											<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінсоцполітики</p>
+											<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінприроди</p>
+											<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">КМУ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОЗ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
 										</div>
 									</div>
-									<div class="hide-audits-recomendation__btn text-center d-lg-none">
-										<a class="hide-audits-recomendation__btn-a" href="#">Більше</a>
+									<div class="hidden-block__btn-block d-lg-none">
+										<div class="hidden-block__btn hidden-block__btn_second">Більше</div>
+									</div>
+							 	</div>
+								<div class="audits-tables__wgt hide-block-parent hide-block-parent_main-table">
+									<div class="basic-head d-lg-none">
+										<h2 class="basic-title">Суб’єкти аудиту</h2>
+										<p class="basic-subtitle">та кількість рекомендацій</p>
+									</div>
+									<div
+										class="basic-description basic-block audits-tables__block hide-block">
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Антимонопольний комітет</p>
+											<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінекономрозвитку</p>
+											<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінсоцполітики</p>
+											<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінприроди</p>
+											<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">КМУ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОЗ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+									</div>
+									<div class="hidden-block__btn-block d-lg-none">
+										<div class="hidden-block__btn hidden-block__btn_second">Більше</div>
 									</div>
 								</div>
-								 <div class="audits-tables__wgt">
-									<div class="basic-head d-lg-none">
-										<h2 class="basic-title">Суб’єкти аудиту</h2>
-										<p class="basic-subtitle">та кількість рекомендацій</p>
-									</div>
-									<div class="hidden-block">
-										<div
-											class="basic-description basic-block audits-tables__block hidden-block__wrapper_second">
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Антимонопольний комітет</p>
-												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Мінекономрозвитку</p>
-												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Мінсоцполітики</p>
-												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
-												</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Мінприроди</p>
-												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">КМУ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
-												</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">МОЗ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
-										</div>
-										<div class="hidden-block__btn-block d-lg-none">
-											<div class="hidden-block__btn hidden-block__btn_second">Більше</div>
-										</div>
-									</div>
-								</div> 
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-audits-deadlines">
 						<div class="container">
 							<div class="basic-head">
@@ -578,11 +452,21 @@
 									</div>
 								</div>
 								<div class="audits-deadlines__wgt" data-aos="fade-up">
-									<div class="audits-deadlines-chart position-relative">
+									<div class="audits-deadlines-chart position-relative chart-max-height_180 chart-max-height_215">
 										<canvas class="chart-donut" id="auditChart3" width="120" height="100"></canvas>
 										<p class="chart-txt">Виконання</p>
 									</div>
-									<div class="audits-deadlines-points basic-points">
+									<div id="auditPoints3" class="audits-deadlines-points basic-points">
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
+											</div>
+											<div class="basic-points__txt">Виконавча влада (913)</div>
+										</div>
+										<div class="basic-points__item">
+											<div class="basic-points__point basic-points__point_theme_heavy-blue">
+											</div>
+											<div class="basic-points__txt">Виконавча влада (913)</div>
+										</div>
 										<div class="basic-points__item">
 											<div class="basic-points__point basic-points__point_theme_heavy-blue">
 											</div>
@@ -614,7 +498,6 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-audits-tables section-audits-tables_days">
 						<div class="container">
 							<div class="basic-head d-none d-lg-block" data-aos="fade-down-right">
@@ -622,126 +505,121 @@
 								<p class="basic-subtitle">та середня кількість днів для реагування</p>
 							</div>
 							<div class="audits-tables">
-								<div class="audits-tables__wgt">
+								<div class="audits-tables__wgt hide-block-parent hide-block-parent_main-table">
 									<div class="basic-head d-lg-none">
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
 										<p class="basic-subtitle">та середня кількість днів для реагування</p>
 									</div>
-									<div class="hidden-block">
-										<div
-											class="basic-description basic-block audits-tables__block hidden-block__wrapper_third">
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">Антимонопольний комітет</p>
-												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">Мінекономрозвитку</p>
-												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">Мінсоцполітики</p>
-												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
-												</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">Мінприроди</p>
-												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">КМУ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
-												</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">МОЗ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-right">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
+									<div
+										class="basic-description basic-block audits-tables__block hide-block">
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">Антимонопольний комітет</p>
+											<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 										</div>
-										<div class="hidden-block__btn-block d-lg-none">
-											<div class="hidden-block__btn hidden-block__btn_third">Більше</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">Мінекономрозвитку</p>
+											<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">Мінсоцполітики</p>
+											<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">Мінприроди</p>
+											<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">КМУ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">МОЗ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-right">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+									</div>
+									<div class="hidden-block__btn-block d-lg-none">
+										<div class="hidden-block__btn hidden-block__btn_third">Більше</div>
 									</div>
 								</div>
-								<div class="audits-tables__wgt">
+								<div class="audits-tables__wgt hide-block-parent hide-block-parent_main-table">
 									<div class="basic-head d-lg-none">
 										<h2 class="basic-title">Суб’єкти аудиту</h2>
 										<p class="basic-subtitle">та середня кількість днів для реагування</p>
 									</div>
-									<div class="hidden-block">
-										<div
-											class="basic-description basic-block audits-tables__block hidden-block__wrapper_four">
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Антимонопольний комітет</p>
-												<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Мінекономрозвитку</p>
-												<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Мінсоцполітики</p>
-												<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
-												</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">Мінприроди</p>
-												<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">КМУ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
-												</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">МОЗ</p>
-												<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">МОН</p>
-												<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
-											<div class="basic-description__wgt" data-aos="zoom-in-left">
-												<p class="basic-description__headline">ДФС</p>
-												<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
-											</div>
+									<div
+										class="basic-description basic-block audits-tables__block hide-block">
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Антимонопольний комітет</p>
+											<p class="basic-description__desc flex-lg-shrink-0">40 рекомендацій</p>
 										</div>
-										<div class="hidden-block__btn-block d-lg-none">
-											<div class="hidden-block__btn hidden-block__btn_four">Більше</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінекономрозвитку</p>
+											<p class="basic-description__desc flex-lg-shrink-0">25 рекондацій</p>
 										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінсоцполітики</p>
+											<p class="basic-description__desc flex-lg-shrink-0">108 рекомендацій
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">Мінприроди</p>
+											<p class="basic-description__desc flex-lg-shrink-0">41 рекамендація</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">КМУ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">301 рекомендація
+											</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОЗ</p>
+											<p class="basic-description__desc flex-lg-shrink-0">37 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">МОН</p>
+											<p class="basic-description__desc flex-lg-shrink-0">58 рекомендацій</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+										<div class="basic-description__wgt hide-block__wgt" data-aos="zoom-in-left">
+											<p class="basic-description__headline">ДФС</p>
+											<p class="basic-description__desc flex-lg-shrink-0">42 рекомендації</p>
+										</div>
+									</div>
+									<div class="hidden-block__btn-block d-lg-none">
+										<div class="hidden-block__btn hidden-block__btn_four">Більше</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-audits-gradation">
 						<div class="container">
 							<div class="basic-head" data-aos="flip-left">
@@ -1154,7 +1032,6 @@
 							</div>
 						</div>
 					</section>
-					<!-- </div> -->
 				</div>
 			</div>
 			<div class="card">
@@ -1171,7 +1048,6 @@
 				</div>
 				<div id="collapseThree" class="collapse collapse-mob" aria-labelledby="headingThree"
 					data-parent="#accordionInfo">
-					<!-- <div class="card-body"> -->
 					<section class="section section-recommendation-quantity">
 						<div class="container">
 							<div class="basic-head">
@@ -1312,7 +1188,6 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-recommendation-implementation">
 						<div class="container">
 							<div class="basic-head" data-aos="flip-left">
@@ -2133,7 +2008,6 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-recommendation-gradation">
 						<div class="container">
 							<div class="basic-head pb-3" data-aos="flip-left">
@@ -2285,7 +2159,6 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-recommendation-classification">
 						<div class="container">
 							<div class="basic-head">
@@ -2380,7 +2253,6 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-recommendation-distribution">
 						<div class="container">
 							<div class="basic-head">
@@ -2440,7 +2312,6 @@
 							</div>
 						</div>
 					</section>
-					<!-- </div> -->
 				</div>
 			</div>
 			<div class="card">
@@ -2457,456 +2328,108 @@
 				</div>
 				<div id="collapseFour" class="collapse collapse-mob" aria-labelledby="headingFour"
 					data-parent="#accordionInfo">
-					<!-- <div class="card-body"> -->
 					<section class="section section-table-extract">
 						<div class="container">
 							<div class="basic-head">
 								<h2 class="basic-title">Витяг із повторно реалізованих програм</h2>
 							</div>
-							<div class="extract-body">
-								<table class="extract-body__table" data-aos="flip-left">
-									<tr>
-										<th class="extract-body__title">КВПКВК</th>
-										<th class="extract-body__title">Кількість повторів</th>
-										<th class="extract-body__title">Сума коштів (млн. грн)</th>
-									</tr>
-									<tr>
-										<td class="extract-body__txt">3101230</td>
-										<td class="extract-body__txt">2</td>
-										<td class="extract-body__txt">18,5</td>
-									</tr>
-									<tr>
-										<td class="extract-body__txt">2401500</td>
-										<td class="extract-body__txt">3</td>
-										<td class="extract-body__txt">203,4</td>
-									</tr>
-									<tr>
-										<td class="extract-body__txt">3101230</td>
-										<td class="extract-body__txt">2</td>
-										<td class="extract-body__txt">1163</td>
-									</tr>
-									<tr>
-										<td class="extract-body__txt">2401500</td>
-										<td class="extract-body__txt">3</td>
-										<td class="extract-body__txt">1193,6</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-					</section>
-
-					<section class="section section-table-amount">
-						<div class="container">
-							<div class="basic-head">
-								<h2 class="basic-title">Розподіл аудитів за обсягом перевірених бюджетних програм</h2>
-							</div>
-							<div class="amount-body">
-								<table class="amount-body__table d-none d-lg-block" data-aos="flip-right">
-									<tr class="amount-body__line">
-										<th class="amount-body__title">Розпорядник</th>
-										<th class="amount-body__title">К-сть програм,
-											що потратили під аудит</th>
-										<th class="amount-body__title">Всього програм</th>
-										<th class="amount-body__title">% охоплених аудитом програм від заг. к-сті
-											програм (2018)</th>
-										<th class="amount-body__title">% коштів, що припадає на розпорядника (2018)</th>
-									</tr>
-									<tr class="amount-body__line">
-										<td class="amount-body__txt amount-body__txt_theme_grey">Національна комісія, що
-											здійснює державне регулювання у сфері ринків фінансових послуг</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">100</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr class="amount-body__line">
-										<td class="amount-body__txt amount-body__txt_theme_grey">Вищий госодарський суд
-										</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">100</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr class="amount-body__line">
-										<td class="amount-body__txt amount-body__txt_theme_grey">Національна комісія, що
-											здійснює державне регулювання у сфері ринків фінансових послуг</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">100</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr class="amount-body__line">
-										<td class="amount-body__txt amount-body__txt_theme_grey">Вищий госодарський суд
-										</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">1</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">100</td>
-										<td class="amount-body__txt amount-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr>
-										<td class="amount-body__txt amount-body__txt_theme_dark">Всього:</td>
-										<td class="amount-body__txt amount-body__txt_theme_dark text-center">110</td>
-										<td class="amount-body__txt amount-body__txt_theme_dark text-center">408</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-						<div class="amount-body-mob d-lg-none" data-aos="flip-right">
-							<div class="hidden-block">
-								<div class="hidden-block__wrapper_five">
-									<div class="amount-body-mob__wgt amount-body-mob__wgt_theme_light">
-										<div class="container">
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Розпорядник</h3>
-												<p class="amount-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Всього програм</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="amount-body-mob__txt text-center">100</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="amount-body-mob__txt text-center">0,1</p>
-											</div>
+							<div class="extract-body basic-block">
+								<div class="extract-body__row">
+									<div class="extract-body__col">
+										<div class="extract-body__chart" data-aos="zoom-out-right">
+											<canvas id="recommendationExtract" width="200" height="150"></canvas>
 										</div>
 									</div>
-									<div class="amount-body-mob__wgt amount-body-mob__wgt_theme_grey">
-										<div class="container">
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Розпорядник</h3>
-												<p class="amount-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
+									<div class="extract-body__col d-none d-lg-block">
+										<div class="extract-body__headline">КВПКВК</div>
+										<div class="basic-points">
+											<div class="basic-points__item" data-aos="fade-up-left">
+												<div
+													class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">3101230
+													<span class="basic-points__span">(2 повтори)</span></div>
 											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
+											<div class="basic-points__item" data-aos="fade-up-left">
+												<div
+													class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">3101230
+													<span class="basic-points__span">(2 повтори)</span></div>
 											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Всього програм</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
+											<div class="basic-points__item" data-aos="fade-up-left">
+												<div class="basic-points__point basic-points__point_theme_blue">
+												</div>
+												<div class="basic-points__txt">3101230
+													<span class="basic-points__span">(2 повтори)</span></div>
 											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="amount-body-mob__txt text-center">100</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="amount-body-mob__txt text-center">0,1</p>
-											</div>
-										</div>
-									</div>
-									<div class="amount-body-mob__wgt amount-body-mob__wgt_theme_light">
-										<div class="container">
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Розпорядник</h3>
-												<p class="amount-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Всього програм</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="amount-body-mob__txt text-center">100</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="amount-body-mob__txt text-center">0,1</p>
-											</div>
-										</div>
-									</div>
-									<div class="amount-body-mob__wgt amount-body-mob__wgt_theme_grey">
-										<div class="container">
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Розпорядник</h3>
-												<p class="amount-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">Всього програм</h3>
-												<p class="amount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="amount-body-mob__txt text-center">100</p>
-											</div>
-											<div class="amount-body-mob__item">
-												<h3 class="amount-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="amount-body-mob__txt text-center">0,1</p>
+											<div class="basic-points__item" data-aos="fade-up-left">
+												<div
+													class="basic-points__point basic-points__point_theme_dark-green">
+												</div>
+												<div class="basic-points__txt">3101230
+													<span class="basic-points__span">(2 повтори)</span></div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="hidden-block__btn-block">
-									<div class="hidden-block__btn hidden-block__btn_five">Більше</div>
-								</div>
 							</div>
 						</div>
 					</section>
-
 					<section class="section section-table-types">
 						<div class="container">
 							<div class="basic-head">
 								<h2 class="basic-title">Розподіл аудитів за видом предмету дослідження</h2>
 							</div>
-							<div class="types-body" data-aos="flip-up">
-								<div class="types-body__wgt">
-									<div class="types-body__item">
-										<h3 class="types-body__name">Кількість звітів
-											з аналізу доходів</h3>
-										<p class="types-body__txt">7</p>
-									</div>
-									<div class="types-body__item">
-										<h3 class="types-body__name">Обсяг доходів, що потратили під аудит</h3>
-										<p class="types-body__txt">179,4 млрд. грн</p>
-									</div>
-									<div class="types-body__item">
-										<h3 class="types-body__name">Кількість звітів
-											з аналізу видатків</h3>
-										<p class="types-body__txt">61</p>
-									</div>
-									<div class="types-body__item">
-										<h3 class="types-body__name">Обсяг видатків, що потратили під аудит</h3>
-										<p class="types-body__txt">267,7 млрд. грн</p>
+							<div class="types-body">
+								<div class="bar-body w-100">
+									<div class="bar-body__row">
+										<div class="bar-body__col">
+											<div class="bar-body__wgt pb-4" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">Кількість звітів з аналізу доходів</p>
+												</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
+															role="progressbar" style="width: 55%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">55%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">179,4</div>
+														<div class="bar-wrapper__popup-sub">млн</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										<div class="bar-body__col">
+											<div class="bar-body__wgt pb-5" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name bar-body__wgt-name_theme_dark">Кількість звітів з аналізу видатків</p>
+												</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_green progress-bar"
+															role="progressbar" style="width: 72%;" aria-valuenow="72"
+															aria-valuemin="0" aria-valuemax="100">72%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">267</div>
+														<div class="bar-wrapper__popup-sub">млн</div>
+													</div>
+												</div>
+												
+											</div>
+										</div>
+										<div class="bar-body__col">
+										</div>
 									</div>
 								</div>
+								<div class="types-subtitle">*всього 447, 1 млн перевірених доходів</div>
 							</div>
 						</div>
 					</section>
-
-					<section class="section section-table-part">
-						<div class="container">
-							<div class="basic-head">
-								<h2 class="basic-title">Розподіл аудитів за часткою перевірених видатків</h2>
-							</div>
-							<div class="part-body">
-								<table class="part-body__table d-none d-lg-block" data-aos="zoom-in">
-									<tr class="part-body__line">
-										<th class="part-body__title">Розпорядник</th>
-										<th class="part-body__title">К-сть програм,
-											що потратили під аудит</th>
-										<th class="part-body__title">Всього програм</th>
-										<th class="part-body__title">% охоплених аудитом програм від заг. к-сті
-											програм (2018)</th>
-										<th class="part-body__title">% коштів, що припадає на розпорядника (2018)</th>
-									</tr>
-									<tr class="part-body__line">
-										<td class="part-body__txt part-body__txt_theme_grey">Національна комісія, що
-											здійснює державне регулювання у сфері ринків фінансових послуг</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr class="part-body__line">
-										<td class="part-body__txt part-body__txt_theme_grey">Вищий госодарський суд
-										</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr class="part-body__line">
-										<td class="part-body__txt part-body__txt_theme_grey">Національна комісія, що
-											здійснює державне регулювання у сфері ринків фінансових послуг</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr class="part-body__line">
-										<td class="part-body__txt part-body__txt_theme_grey">Вищий госодарський суд
-										</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">1</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">100</td>
-										<td class="part-body__txt part-body__txt_theme_grey text-center">0.1</td>
-									</tr>
-									<tr>
-										<td class="part-body__txt part-body__txt_theme_dark">Всього:</td>
-										<td class="part-body__txt part-body__txt_theme_dark text-center">110</td>
-										<td class="part-body__txt part-body__txt_theme_dark text-center">408</td>
-									</tr>
-								</table>
-							</div>
-						</div>
-						<div class="part-body-mob d-lg-none" data-aos="zoom-in">
-							<div class="hidden-block">
-								<div class="hidden-block__wrapper_five">
-									<div class="part-body-mob__wgt part-body-mob__wgt_theme_light">
-										<div class="container">
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Розпорядник</h3>
-												<p class="part-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Всього програм</h3>
-												<p class="apartmount-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="part-body-mob__txt text-center">100</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="part-body-mob__txt text-center">0,1</p>
-											</div>
-										</div>
-									</div>
-									<div class="part-body-mob__wgt part-body-mob__wgt_theme_grey">
-										<div class="container">
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Розпорядник</h3>
-												<p class="part-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Всього програм</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="part-body-mob__txt text-center">100</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="part-body-mob__txt text-center">0,1</p>
-											</div>
-										</div>
-									</div>
-									<div class="part-body-mob__wgt part-body-mob__wgt_theme_light">
-										<div class="container">
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Розпорядник</h3>
-												<p class="part-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Всього програм</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="part-body-mob__txt text-center">100</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="part-body-mob__txt text-center">0,1</p>
-											</div>
-										</div>
-									</div>
-									<div class="part-body-mob__wgt part-body-mob__wgt_theme_grey">
-										<div class="container">
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Розпорядник</h3>
-												<p class="part-body-mob__txt">Національна комісія, що здійснює
-													державне
-													регулювання у сфері ринків фінансових послуг</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">К-сть програм, що потратили під аудит
-												</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">Всього програм</h3>
-												<p class="part-body-mob__txt text-center">1</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% охоплених аудитом програм від заг.
-													к-сті
-													програм (2018)</h3>
-												<p class="part-body-mob__txt text-center">100</p>
-											</div>
-											<div class="part-body-mob__item">
-												<h3 class="part-body-mob__title">% коштів, що припадає на розпорядника
-													(2018)
-												</h3>
-												<p class="part-body-mob__txt text-center">0,1</p>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="hidden-block__btn-block">
-									<div class="hidden-block__btn hidden-block__btn_five">Більше</div>
-								</div>
-							</div>
-						</div>
-					</section>
-
 					<section class="section section-table-earn">
 						<div class="container">
 							<div class="basic-head">
@@ -2966,96 +2489,10 @@
 							</div>
 						</div>
 					</section>
-
-					<!-- <section>
-						<div class="container">
-							<div class="hide-audits-recomendation__blocks">
-								<div class="hide-audits-recomendation__block d-flex pb-3">
-									<div class="row">
-										<div class="col-2 col-md-1 d-flex justify-content-center">
-											<div class="points">
-												<div class="points--p">1</div>
-											</div>
-										</div>
-										<div class="col-10 col-md-11">
-											<div class="rules-content">
-												<p class="rules-content--p">Идейные соображения высшего порядка, а также широким активом влечет за собой процесс внедрения и модернизации направлений прогрессивного развития.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-			
-								<div class="hide-audits-recomendation__block d-flex pb-3">
-									<div class="row">
-										<div class="col-2 col-md-1 d-flex justify-content-center">
-											<div class="points">
-												<div class="points--p">2</div>
-											</div>
-										</div>
-										<div class="col-10 col-md-11">
-											<div class="rules-content">
-												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-			
-								<div class="hide-audits-recomendation__block d-flex pb-3">
-									<div class="row">
-										<div class="col-2 col-md-1 d-flex justify-content-center">
-											<div class="points">
-												<div class="points--p">3</div>
-											</div>
-										</div>
-										<div class="col-10 col-md-11">
-											<div class="rules-content">
-												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-			
-								<div class="hide-audits-recomendation__block d-flex pb-3">
-									<div class="row">
-										<div class="col-2 col-md-1 d-flex justify-content-center">
-											<div class="points">
-												<div class="points--p">4</div>
-											</div>
-										</div>
-										<div class="col-10 col-md-11">
-											<div class="rules-content">
-												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-			
-								<div class="hide-audits-recomendation__block d-flex pb-3">
-									<div class="row">
-										<div class="col-2 col-md-1 d-flex justify-content-center">
-											<div class="points">
-												<div class="points--p">5</div>
-											</div>
-										</div>
-										<div class="col-10 col-md-11">
-											<div class="rules-content">
-												<p class="rules-content--p">Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.Разнообразный и богатый опыт сложившаяся структура организации представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="hide-audits-recomendation__btn text-center">
-								<a class="hide-audits-recomendation__btn-a" href="#">Більше</a>
-							</div>
-						</div>
-					</section> -->
-					<!-- </div> -->
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__span">
@@ -3065,12 +2502,10 @@
 	</footer>
 
 	<script src="js/libs/jquery-3.4.1.min.js"></script>
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+	<script src="js/libs/aos.js"></script>
+	<script src="js/libs/Chart.bundle.js"></script>
 	<script src="js/libs/bootstrap.min.js"></script>
 	<script src="js/libs/popper.min.js"></script>
-	<script src="js/libs.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
-
 </html>
