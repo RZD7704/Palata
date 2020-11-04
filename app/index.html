@@ -241,13 +241,13 @@
 					<section class="section section-general-smart">
 						<div class="container">
 							<div class="basic-head">
-								<h2 class="basic-title">Smart-оцінка</h2>
+								<h2 class="basic-title">Smart-оцінка рекомендацій</h2>
 							</div>
 							<div class="smart-body basic-block">
 								<div class="smart-body__wrapper">
 									<div class="smart-body__wgt" data-aos="zoom-in">
 										<div class="smart-body__chart circle-chart-wrap">
-											<div class="circle-chart" data-percent="60">
+											<div class="circle-chart" data-percent="58">
 												<div class="chart-box">
 													<div class="chart-circle-base"></div>
 													<svg>
@@ -257,15 +257,15 @@
 													<div class="per-num"><span>0</span>%</div>
 												</div>
 												<div class="circle-chart__popup">
-													<p class="circle-chart__popup-txt">60%</p>
+													<p class="circle-chart__popup-txt">58% - конкретні<br>42% - неконкренті</p>
 												</div>
 											</div>
 										</div>
-										<p class="smart-body__txt">Співвідношення реалістичності</p>
+										<p class="smart-body__txt">Конкретність</p>
 									</div>
 									<div class="smart-body__wgt" data-aos="zoom-in">
 										<div class="smart-body__chart circle-chart-wrap">
-											<div class="circle-chart" data-percent="60">
+											<div class="circle-chart" data-percent="97">
 												<div class="chart-box">
 													<div class="chart-circle-base"></div>
 													<svg>
@@ -275,15 +275,15 @@
 													<div class="per-num"><span>0</span>%</div>
 												</div>
 												<div class="circle-chart__popup">
-													<p class="circle-chart__popup-txt">60%</p>
+													<p class="circle-chart__popup-txt">97% - реалістичні<br>3% - нереалістичні</p>
 												</div>
 											</div>
 										</div>
-										<p class="smart-body__txt">Співвідношення реалістичності</p>
+										<p class="smart-body__txt">Реалістичнічть</p>
 									</div>
 									<div class="smart-body__wgt" data-aos="zoom-in">
 										<div class="smart-body__chart circle-chart-wrap">
-											<div class="circle-chart" data-percent="60">
+											<div class="circle-chart" data-percent="50">
 												<div class="chart-box">
 													<div class="chart-circle-base"></div>
 													<svg>
@@ -293,15 +293,15 @@
 													<div class="per-num"><span>0</span>%</div>
 												</div>
 												<div class="circle-chart__popup">
-													<p class="circle-chart__popup-txt">60%</p>
+													<p class="circle-chart__popup-txt">50% - вимірювані<br>50% - невимірювані</p>
 												</div>
 											</div>
 										</div>
-										<p class="smart-body__txt">Співвідношення реалістичності</p>
+										<p class="smart-body__txt">Вимірюваність</p>
 									</div>
 									<div class="smart-body__wgt" data-aos="zoom-in">
 										<div class="smart-body__chart circle-chart-wrap">
-											<div class="circle-chart" data-percent="60">
+											<div class="circle-chart" data-percent="99">
 												<div class="chart-box">
 													<div class="chart-circle-base"></div>
 													<svg>
@@ -311,11 +311,11 @@
 													<div class="per-num"><span>0</span>%</div>
 												</div>
 												<div class="circle-chart__popup">
-													<p class="circle-chart__popup-txt">60%</p>
+													<p class="circle-chart__popup-txt">99% - недедлайнові<br>50% - дедлайнові</p>
 												</div>
 											</div>
 										</div>
-										<p class="smart-body__txt">Співвідношення реалістичності</p>
+										<p class="smart-body__txt">Обмеженість у часі (дедлайновість)</p>
 									</div>
 								</div>
 							</div>
@@ -345,24 +345,25 @@
 										<h2 class="basic-title">Суб’єкти аудитів</h2>
 									</div>
 									<div class="audits-charts__content basic-block" data-aos="zoom-in-right">
-										<div class="audits-charts__content-item audit-chart chart-max-height">
-											<canvas id="auditChart1" width="200" height="150"></canvas>
+										<div class="audits-charts__content-item audit-chart position-relative chart-max-height">
+											<canvas id="auditChartRecommendationRecipients" width="200" height="150"></canvas>
+											<p class="chart-txt">91 отримувач</p>
 										</div>
-										<div id="auditPoint1" class="audits-charts__content-item basic-points">
+										<div id="auditPointsRecommendationRecipients" class="audits-charts__content-item basic-points">
 										</div>
 									</div>
 								</div>
 								<div class="audits-charts__wgt">
 									<div class="basic-head">
-										<h2 class="basic-title">Аудити</h2>
+										<h2 class="basic-title">Категорії аудитів 2018 року</h2>
 									</div>
 									<div class="audits-charts__content basic-block" data-aos="zoom-in-left">
 										<div class="audits-charts__content-item audit-chart position-relative chart-max-height">
-											<canvas class="chart-donut" id="auditChart2" width="200" height="150"></canvas>
+											<canvas class="chart-donut" id="auditChartCategories" width="200" height="150"></canvas>
 											<p class="chart-txt">90
 												Аудитів</p>
 										</div>
-										<div id="auditPoint2" class="audits-charts__content-item basic-points">
+										<div id="auditPointsCategories" class="audits-charts__content-item basic-points">
 										</div>
 									</div>
 								</div>

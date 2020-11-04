@@ -170,11 +170,7 @@ var auditSubjects = {
     names: ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'],
     colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)']
 };
-var auditPoint1 = {
-    values:[51, 15, 13, 10, 10, 1, 20],
-    names: ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ', '3 МКЛ'],
-    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)', 'rgba(12, 218, 232, 0.8)']
-};
+
 
 var auditPointsImplementation = {
     values:[27, 13, 19, 14, 27],
@@ -182,19 +178,41 @@ var auditPointsImplementation = {
     colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)']
 };
 
-function addDoughnutPoints (parent, values, names, colors) {
+var auditPointsRecommendationRecipients = {
+    values:[74, 3, 11, 4, 2, 2, 6],
+    names: ['Виконавча влада', 'Правоохоронці', 'ОДА, КМДА', 'Держпідприємства та установи', 'Місцеве самоврядування', 'Суди', 'Інші'],
+    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)', 'rgba(203, 104, 219, 0.8)']
+};
+
+var auditPointsCategories = {
+    values:[7, 8, 10, 6, 7, 6, 6, 7, 5, 28],
+    names: ['Охорона здоров’я', 'Освіта', 'Соціальна політика', 'Культура і наука', 'Фіскальна політика', 'Провосуддя і юстриція', 'Екологія', 'Висновки про виконання бюджету', 'Оборона і безпека', 'Інше'],
+    colors: ['rgba(12, 91, 124, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(203, 104, 219, 0.8)', 'rgba(124, 249, 25, 1.0)', 'rgba(109, 186, 168, 1.0)', 'rgba(12, 116, 92, 1.0)', 'rgba(196, 218, 227, 0.8)', 'rgba(35, 212, 223, 1.0)', 'rgba(117, 223, 147, 1.0)', 'rgba(32, 11, 161, 0.8)']
+};
+
+function addDoughnutPoints (parent, values, names, colors, percent) {
     for (let i = 0; i < values.length; i++) {
+        let name;
+        if(percent){
+            name = values[i] + '%';
+        } else {
+            name = values[i];
+        }
         $(`<div class="basic-points__item">
             <div class="basic-points__point" style="background-color:${colors[i]}"></div>
-            <div class="basic-points__txt">${names[i]}(${values[i]})</div>
+            <div class="basic-points__txt">${names[i]}(${name})</div>
         </div>`).appendTo(parent);
     }
 }
-addDoughnutPoints('#auditPointsImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
+addDoughnutPoints('#auditPointsImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors, true);
+
+addDoughnutPoints('#auditPointsRecommendationRecipients', auditPointsRecommendationRecipients.values, auditPointsRecommendationRecipients.names, auditPointsRecommendationRecipients.colors, true);
+
+addDoughnutPoints('#auditPointsCategories', auditPointsCategories.values, auditPointsCategories.names, auditPointsCategories.colors, true);
 
 addDoughnutPoints('#pointsID', auditSubjects.values, auditSubjects.names, auditSubjects.colors);
-addDoughnutPoints('#auditPoint1', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
-addDoughnutPoints('#auditPoint2', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
+
+
 
 
 
@@ -245,9 +263,9 @@ function addThinDoughnutChart(selector, dataArr, labelsArr, color) {
 }
 addDoughnutChart('#auditImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
 
-addDoughnutChart('#auditChart1', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
+addDoughnutChart('#auditChartRecommendationRecipients', auditPointsRecommendationRecipients.values, auditPointsRecommendationRecipients.names, auditPointsRecommendationRecipients.colors);
 
-addDoughnutChart('#auditChart2', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
+addDoughnutChart('#auditChartCategories', auditPointsCategories.values, auditPointsCategories.names, auditPointsCategories.colors);
 
 // addDoughnutChart('#auditChartKmu1', [51, 49], ['ЦПСМД №2', '4 МКЛ'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
 
