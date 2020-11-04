@@ -267,7 +267,7 @@
 
         @media (min-width: 992px) {
             width: 33.33%;
-            max-width: 265px;
+            max-width: 310px;
         }
     }
 
@@ -288,6 +288,7 @@
 
     &__wgt-txt {
         color: #20D432;
+        flex-shrink: 0;
     }
 
     &__wgt-name_theme_dark {
