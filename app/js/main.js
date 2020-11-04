@@ -176,6 +176,12 @@ var auditPoint1 = {
     colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)', 'rgba(12, 218, 232, 0.8)']
 };
 
+var auditPointsImplementation = {
+    values:[27, 13, 19, 14, 27],
+    names: ['інформація відсутня', 'ні', 'так', '50/50', 'внесено в план'],
+    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)']
+};
+
 function addDoughnutPoints (parent, values, names, colors) {
     for (let i = 0; i < values.length; i++) {
         $(`<div class="basic-points__item">
@@ -184,10 +190,13 @@ function addDoughnutPoints (parent, values, names, colors) {
         </div>`).appendTo(parent);
     }
 }
+addDoughnutPoints('#auditPointsImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
 
 addDoughnutPoints('#pointsID', auditSubjects.values, auditSubjects.names, auditSubjects.colors);
 addDoughnutPoints('#auditPoint1', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
 addDoughnutPoints('#auditPoint2', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
+
+
 
 function addDoughnutChart(selector, dataArr, labelsArr, color) {
     var ctx = document.querySelector(selector);
@@ -234,16 +243,15 @@ function addThinDoughnutChart(selector, dataArr, labelsArr, color) {
         }
     });
 }
+addDoughnutChart('#auditImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
 
 addDoughnutChart('#auditChart1', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
 
 addDoughnutChart('#auditChart2', auditPoint1.values, auditPoint1.names, auditPoint1.colors);
 
-addDoughnutChart('#auditChart3', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(12, 218, 232, 0.8)']);
+// addDoughnutChart('#auditChartKmu1', [51, 49], ['ЦПСМД №2', '4 МКЛ'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
 
-addDoughnutChart('#auditChartKmu1', [51, 49], ['ЦПСМД №2', '4 МКЛ'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
-
-addDoughnutChart('#auditChartKmu2', [51, 49], ['ЦПСМД №2', '4 МКЛ'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
+addDoughnutChart('#auditChartKmu2', [35, 65], ['вчасно', 'із запізенням'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
 
 addDoughnutChart('#recommendationQuantity', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
 
