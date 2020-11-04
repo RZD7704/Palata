@@ -370,6 +370,100 @@
 							</div>
 						</div>
 					</section>
+					<section class="section section-recommendation-classification">
+						<div class="container">
+							<div class="basic-head">
+								<h2 class="basic-title">Класифікація рекомендацій за темами</h2>
+							</div>
+							<div class="classification-body basic-block" data-aos="zoom-in">
+								<div class="classification-body__row">
+									<div class="classification-body__col">
+										<div class="classification-body__chart">
+											<canvas id="recommendationClassification" width="200" height="150"></canvas>
+										</div>
+									</div>
+									<div class="classification-body__col">
+										<div class="basic-points">
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Інше 414
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Культура і наука (6)
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_blue">
+												</div>
+												<div class="basic-points__txt">Екологія (6)
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_dark-green">
+												</div>
+												<div class="basic-points__txt">Оборона і безпека (5)
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="classification-body__col">
+										<div class="basic-points">
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Інше 414
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Культура і наука (6)
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_blue">
+												</div>
+												<div class="basic-points__txt">Екологія (6)
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_dark-green">
+												</div>
+												<div class="basic-points__txt">Оборона і безпека (5)
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="classification-body__col">
+										<div class="basic-points">
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Інше 414
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_heavy-blue">
+												</div>
+												<div class="basic-points__txt">Культура і наука (6)
+												</div>
+											</div>
+											<div class="basic-points__item">
+												<div class="basic-points__point basic-points__point_theme_blue">
+												</div>
+												<div class="basic-points__txt">Екологія (6)
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					<section class="section section-audits-tables section-audits-tables_recommendation">
 						<div class="container">
 							<div class="basic-head d-none d-lg-block" data-aos="fade-down-right">
@@ -2259,13 +2353,13 @@
 					<section class="section section-recommendation-gradation">
 						<div class="container">
 							<div class="basic-head pb-3" data-aos="flip-left">
-								<h2 class="basic-title">Градація виконання рекомендацій</h2>
+								<h2 class="basic-title">Виконання рекомендацій в розрізі їх класифкації</h2>
 							</div>
 							<div class="gradation-points">
 								<div class="gradation-points__item">
 									<div class="gradation-points__point gradation-points__point_theme_blue">
 									</div>
-									<div class="gradation-points__txt">Виконано</div>
+									<div class="gradation-points__txt">Кількість рекомендацій</div>
 								</div>
 								<div class="gradation-points__item">
 									<div class="gradation-points__point gradation-points__point_theme_grey">
@@ -2279,220 +2373,202 @@
 										<div class="bar-body__col">
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Інше</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(414 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 55%;" aria-valuenow="55"
-														aria-valuemin="0" aria-valuemax="100">55%</div>
-												</div>
-											</div>
-											<div class="bar-body__wgt" data-aos="zoom-in-up">
-												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
-												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 100%;" aria-valuenow="100"
-														aria-valuemin="0" aria-valuemax="100">100%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 61%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">61%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">414</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Створення та зміни НПА
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(257 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 55%;" aria-valuenow="55"
-														aria-valuemin="0" aria-valuemax="100">55%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 58%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">58%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">257</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Внутрішній контроль
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(153 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 55%;" aria-valuenow="55"
-														aria-valuemin="0" aria-valuemax="100">55%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 62%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">62%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">153</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
+												</div>
+											</div>
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name">Оформлення та користування
+														нерухомим майном</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(32 виконано)</p>
+												</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 53%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">53%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">32</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="bar-body__col">
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Неоднозначні рекомендації
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(102 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 55%;" aria-valuenow="55"
-														aria-valuemin="0" aria-valuemax="100">55%</div>
-												</div>
-											</div>
-											<div class="bar-body__wgt" data-aos="zoom-in-up">
-												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
-												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="v-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 100%;" aria-valuenow="100"
-														aria-valuemin="0" aria-valuemax="100">100%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 66%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">66%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">102</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Притягнення до відповідальності
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(83 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 55%;" aria-valuenow="55"
-														aria-valuemin="0" aria-valuemax="100">55%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 51%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">51%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">83</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Кадри та оплата праці
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(38 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 100%;" aria-valuenow="100"
-														aria-valuemin="0" aria-valuemax="100">100%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 66%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">66%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">38</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
+												</div>
+											</div>
+											<div class="bar-body__wgt" data-aos="zoom-in-up">
+												<div class="bar-body__wgt-head">
+													<p class="bar-body__wgt-name">Пришвидшення процесів
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(32 виконано)</p>
+												</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 66%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">66%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">32</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="bar-body__col">
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Зміни статутів</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(10 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 55%;" aria-valuenow="55"
-														aria-valuemin="0" aria-valuemax="100">55%</div>
-												</div>
-											</div>
-											<div class="bar-body__wgt" data-aos="zoom-in-up">
-												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
-												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 100%;" aria-valuenow="100"
-														aria-valuemin="0" aria-valuemax="100">100%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 90%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">90%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">10</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Відшкодування збитків
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(9 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 100%;" aria-valuenow="100"
-														aria-valuemin="0" aria-valuemax="100">100%</div>
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 56%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">56%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">9</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 											<div class="bar-body__wgt" data-aos="zoom-in-up">
 												<div class="bar-body__wgt-head">
-													<p class="bar-body__wgt-name">ДСАУ</p>
+													<p class="bar-body__wgt-name">Дотримання бюдж. законодавсвта
+													</p>
+													<p class="bar-body__wgt-txt bar-body__wgt-txt_theme_blue">(107 виконано)</p>
 												</div>
-												<div class="bar-body__wgt-line progress">
-													<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
-														role="progressbar" style="width: 100%;" aria-valuenow="100"
-														aria-valuemin="0" aria-valuemax="100">100%</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-					<section class="section section-recommendation-classification">
-						<div class="container">
-							<div class="basic-head">
-								<h2 class="basic-title">Класифікація рекомендацій</h2>
-							</div>
-							<div class="classification-body basic-block" data-aos="zoom-in">
-								<div class="classification-body__row">
-									<div class="classification-body__col">
-										<div class="classification-body__chart">
-											<canvas id="recommendationClassification" width="200" height="150"></canvas>
-										</div>
-									</div>
-									<div class="classification-body__col">
-										<div class="basic-points">
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Інше 414
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Культура і наука (6)
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_blue">
-												</div>
-												<div class="basic-points__txt">Екологія (6)
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_dark-green">
-												</div>
-												<div class="basic-points__txt">Оборона і безпека (5)
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="classification-body__col">
-										<div class="basic-points">
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Інше 414
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Культура і наука (6)
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_blue">
-												</div>
-												<div class="basic-points__txt">Екологія (6)
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_dark-green">
-												</div>
-												<div class="basic-points__txt">Оборона і безпека (5)
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="classification-body__col">
-										<div class="basic-points">
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Інше 414
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_heavy-blue">
-												</div>
-												<div class="basic-points__txt">Культура і наука (6)
-												</div>
-											</div>
-											<div class="basic-points__item">
-												<div class="basic-points__point basic-points__point_theme_blue">
-												</div>
-												<div class="basic-points__txt">Екологія (6)
+												<div class="bar-wrapper">
+													<div class="bar-body__wgt-line progress">
+														<div class="bar-body__wgt-bar bar-body__wgt-bar_theme_blue progress-bar"
+															role="progressbar" style="width: 57%;" aria-valuenow="55"
+															aria-valuemin="0" aria-valuemax="100">57%</div>
+													</div>
+													<div class="bar-wrapper__popup">
+														<div class="bar-wrapper__popup-txt">107</div>
+														<div class="bar-wrapper__popup-sub">вик.</div>
+													</div>
 												</div>
 											</div>
 										</div>
