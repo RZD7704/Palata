@@ -261,32 +261,41 @@ function addThinDoughnutChart(selector, dataArr, labelsArr, color) {
         }
     });
 }
+
+function addPieChart(selector, dataArr, labelsArr, color) {
+    var ctx = document.querySelector(selector);
+    var Сhart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: labelsArr,
+            datasets: [{
+                label: '# of Votes',
+                data: dataArr,
+                backgroundColor: color,
+                borderColor: color,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            // cutoutPercentage: 70,
+            legend: {
+                display: false
+            }
+        }
+    });
+}
+
 addDoughnutChart('#auditImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
 
 addDoughnutChart('#auditChartRecommendationRecipients', auditPointsRecommendationRecipients.values, auditPointsRecommendationRecipients.names, auditPointsRecommendationRecipients.colors);
 
 addDoughnutChart('#auditChartCategories', auditPointsCategories.values, auditPointsCategories.names, auditPointsCategories.colors);
 
-// addDoughnutChart('#auditChartKmu1', [51, 49], ['ЦПСМД №2', '4 МКЛ'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
-
 addDoughnutChart('#auditChartKmu2', [35, 65], ['вчасно', 'із запізенням'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
-
-// addDoughnutChart('#recommendationQuantity', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-// addDoughnutChart('#recommendationImplementation1', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-// addDoughnutChart('#recommendationImplementation2', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-// addDoughnutChart('#recommendationImplementation3', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-// addDoughnutChart('#recommendationImplementation4', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-// addDoughnutChart('#recommendationImplementation5', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
 
 addDoughnutChart('#recommendationClassification', [414, 257, 153, 107, 102, 83, 38, 32, 32, 10, 9], ['Інше', 'Створення та зміни НПА', 'Внутрішній контроль', 'Дотримання бюдж. закнодавства', 'Неоднозначні рекомендації', 'Притягнення до відповідальності', 'Кадри та оплата праці', 'Оформлення та користування нерухомим майном', 'Пришвидшення процесів', 'Зміни статутів', 'Відшкодування збитків'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(203, 104, 219, 0.8)', 'rgba(124, 249, 25, 1.0)', 'rgba(109, 186, 168, 1.0)', 'rgba(12, 116, 92, 1.0)', 'rgba(196, 218, 227, 0.8)', 'rgba(35, 212, 223, 1.0)', 'rgba(117, 223, 147, 1.0)', 'rgba(124, 249, 25, 1.0)', 'rgba(203, 104, 219, 0.8)']);
 
-addDoughnutChart('#recommendationExtract', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
+// addDoughnutChart('#recommendationExtract', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
 
-// addThinDoughnutChart('#auditThinChart1', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-// addThinDoughnutChart('#auditThinChart2', auditSubjects.values, auditSubjects.names, auditSubjects.colors);
+addPieChart('#typesPieChart1', [61, 7], ['К-ть звітів (аналіз видатків)', 'К-ть звітів з аналізу доходів'], ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']);
+addPieChart('#typesPieChart2', [267.7, 179.4], ['Обсяг видатків(млрд.)', 'Обсяг доходів(млрд.)'], ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']);

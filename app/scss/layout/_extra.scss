@@ -266,6 +266,14 @@
         width: 100%;
 
         @media (min-width: 992px) {
+            // width: 33.33%;
+            width: 45%;
+            // max-width: 310px;
+        }
+    }
+
+    &__col_3 {
+        @media (min-width: 992px) {
             width: 33.33%;
             max-width: 310px;
         }
