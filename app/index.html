@@ -221,8 +221,9 @@
 											</div>
 										</div> -->
 										<div class="deadlines-tabs__content-wrapper">
-											<div class="deadlines-tabs__content-item">
+											<div class="audits-deadlines-chart position-relative chart-max-height_180 chart-max-height_215">
 												<canvas id="auditChartKmu2" width="120" height="100"></canvas>
+												<p class="chart-txt">Розгляд</p>
 											</div>
 											<div class="deadlines-tabs__content-item">
 												<div class="deadlines-tabs__content-title">Дотримання отримувачами  місячного строку на інформування про розгляд рекомендацій (без КМУ)</div>
@@ -250,7 +251,10 @@
 										<canvas class="chart-donut" id="auditImplementation" width="120" height="100"></canvas>
 										<p class="chart-txt">Виконання</p>
 									</div>
-									<div id="auditPointsImplementation" class="audits-deadlines-points basic-points">
+									<div class="donat-point-wrapper">
+										<div class="deadlines-tabs__content-title">Виконання рекомендацій</div>
+										<div id="auditPointsImplementation" class="audits-deadlines-points basic-points">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -329,7 +333,7 @@
 													<div class="per-num"><span>0</span>%</div>
 												</div>
 												<div class="circle-chart__popup">
-													<p class="circle-chart__popup-txt">99% - недедлайнові<br>50% - дедлайнові</p>
+													<p class="circle-chart__popup-txt">99% - недедлайнові<br>1% - дедлайнові</p>
 												</div>
 											</div>
 										</div>
@@ -1610,7 +1614,7 @@
 																</div>
 																<div class="bar-wrapper__popup">
 																	<div class="bar-wrapper__popup-txt">20</div>
-																	<div class="bar-wrapper__popup-sub">вик.</div>
+																	<div class="bar-wrapper__popup-sub">виконано</div>
 																</div>
 															</div>
 														</div>
