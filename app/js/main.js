@@ -190,6 +190,18 @@ var auditPointsCategories = {
     colors: ['rgba(12, 91, 124, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(203, 104, 219, 0.8)', 'rgba(124, 249, 25, 1.0)', 'rgba(109, 186, 168, 1.0)', 'rgba(12, 116, 92, 1.0)', 'rgba(196, 218, 227, 0.8)', 'rgba(35, 212, 223, 1.0)', 'rgba(117, 223, 147, 1.0)', 'rgba(32, 11, 161, 0.8)']
 };
 
+var recommendationPointsRecommendationYears = {
+    values:[7, 27, 46, 20],
+    names: ['2015', '2016', '2017', '2018'],
+    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)']
+};
+
+var auditPointsYears = {
+    values:[6.5, 35, 35, 23.5],
+    names: ['2015', '2016', '2017', '2018'],
+    colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)']
+};
+
 function addDoughnutPoints (parent, values, names, colors, percent) {
     for (let i = 0; i < values.length; i++) {
         let name;
@@ -212,6 +224,11 @@ addDoughnutPoints('#auditPointsCategories', auditPointsCategories.values, auditP
 
 addDoughnutPoints('#pointsID', auditSubjects.values, auditSubjects.names, auditSubjects.colors);
 
+addDoughnutPoints('#recommendationPointsRecommendationYears', recommendationPointsRecommendationYears.values, recommendationPointsRecommendationYears.names, recommendationPointsRecommendationYears.colors, true);
+
+addDoughnutPoints('#auditPointsYears', auditPointsYears.values, auditPointsYears.names, auditPointsYears.colors, true);
+
+
 
 
 
@@ -223,7 +240,7 @@ function addDoughnutChart(selector, dataArr, labelsArr, color) {
         data: {
             labels: labelsArr,
             datasets: [{
-                label: '# of Votes',
+                label: '# of Votes]',
                 data: dataArr,
                 backgroundColor: color,
                 borderColor: color,
@@ -291,9 +308,13 @@ addDoughnutChart('#auditChartRecommendationRecipients', auditPointsRecommendatio
 
 addDoughnutChart('#auditChartCategories', auditPointsCategories.values, auditPointsCategories.names, auditPointsCategories.colors);
 
+addDoughnutChart('#recommendationChartRecommendationYears', recommendationPointsRecommendationYears.values, recommendationPointsRecommendationYears.names, recommendationPointsRecommendationYears.colors);
+
+addDoughnutChart('#recommendationChartYears', auditPointsYears.values, auditPointsYears.names, auditPointsYears.colors);
+
 addDoughnutChart('#auditChartKmu2', [35, 65], ['вчасно', 'із запізенням'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
 
-addDoughnutChart('#recommendationClassification', [414, 257, 153, 107, 102, 83, 38, 32, 32, 10, 9], ['Інше', 'Створення та зміни НПА', 'Внутрішній контроль', 'Дотримання бюдж. закнодавства', 'Неоднозначні рекомендації', 'Притягнення до відповідальності', 'Кадри та оплата праці', 'Оформлення та користування нерухомим майном', 'Пришвидшення процесів', 'Зміни статутів', 'Відшкодування збитків'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(203, 104, 219, 0.8)', 'rgba(124, 249, 25, 1.0)', 'rgba(109, 186, 168, 1.0)', 'rgba(12, 116, 92, 1.0)', 'rgba(196, 218, 227, 0.8)', 'rgba(35, 212, 223, 1.0)', 'rgba(117, 223, 147, 1.0)', 'rgba(124, 249, 25, 1.0)', 'rgba(203, 104, 219, 0.8)']);
+// addDoughnutChart('#recommendationClassification', [414, 257, 153, 107, 102, 83, 38, 32, 32, 10, 9], ['Інше', 'Створення та зміни НПА', 'Внутрішній контроль', 'Дотримання бюдж. закнодавства', 'Неоднозначні рекомендації', 'Притягнення до відповідальності', 'Кадри та оплата праці', 'Оформлення та користування нерухомим майном', 'Пришвидшення процесів', 'Зміни статутів', 'Відшкодування збитків'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(203, 104, 219, 0.8)', 'rgba(124, 249, 25, 1.0)', 'rgba(109, 186, 168, 1.0)', 'rgba(12, 116, 92, 1.0)', 'rgba(196, 218, 227, 0.8)', 'rgba(35, 212, 223, 1.0)', 'rgba(117, 223, 147, 1.0)', 'rgba(124, 249, 25, 1.0)', 'rgba(203, 104, 219, 0.8)']);
 
 // addDoughnutChart('#recommendationExtract', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
 
