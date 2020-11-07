@@ -251,6 +251,19 @@ function addDoughnutChart(selector, dataArr, labelsArr, color) {
             cutoutPercentage: 70,
             legend: {
                 display: false
+            },
+            tooltips: {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    return '';
+                  },
+                  afterLabel: function(tooltipItem, data) {
+                    var dataset = data['datasets'][0];
+                    var percent = data['datasets'][0]['data'][tooltipItem['index']];
+                    return data['labels'][tooltipItem['index']] + ': ' + percent + '%';
+                  }
+                },
+                displayColors: false
             }
         }
     });
