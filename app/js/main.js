@@ -202,6 +202,18 @@ var auditPointsYears = {
     colors: ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)']
 };
 
+var typesPointsChart1 = {
+    values:[61, 7],
+    names: ['К-ть звітів (аналіз видатків)', 'К-ть звітів (аналіз доходів)'],
+    colors: ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']
+};
+
+var typesPointsChart2 = {
+    values:[267.7, 179.4],
+    names: ['Обсяг видатків(млрд.)', 'Обсяг доходів(млрд.)'],
+    colors: ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']
+};
+
 function addDoughnutPoints (parent, values, names, colors, percent) {
     for (let i = 0; i < values.length; i++) {
         let name;
@@ -228,10 +240,9 @@ addDoughnutPoints('#recommendationPointsRecommendationYears', recommendationPoin
 
 addDoughnutPoints('#auditPointsYears', auditPointsYears.values, auditPointsYears.names, auditPointsYears.colors, true);
 
+addDoughnutPoints('#typesPointsChart1', typesPointsChart1.values, typesPointsChart1.names, typesPointsChart1.colors, false);
 
-
-
-
+addDoughnutPoints('#typesPointsChart2', typesPointsChart2.values, typesPointsChart2.names, typesPointsChart2.colors, false);
 
 function addDoughnutChart(selector, dataArr, labelsArr, color) {
     var ctx = document.querySelector(selector);
@@ -327,9 +338,6 @@ addDoughnutChart('#recommendationChartYears', auditPointsYears.values, auditPoin
 
 addDoughnutChart('#auditChartKmu2', [35, 65], ['вчасно', 'із запізенням'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
 
-// addDoughnutChart('#recommendationClassification', [414, 257, 153, 107, 102, 83, 38, 32, 32, 10, 9], ['Інше', 'Створення та зміни НПА', 'Внутрішній контроль', 'Дотримання бюдж. закнодавства', 'Неоднозначні рекомендації', 'Притягнення до відповідальності', 'Кадри та оплата праці', 'Оформлення та користування нерухомим майном', 'Пришвидшення процесів', 'Зміни статутів', 'Відшкодування збитків'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(203, 104, 219, 0.8)', 'rgba(124, 249, 25, 1.0)', 'rgba(109, 186, 168, 1.0)', 'rgba(12, 116, 92, 1.0)', 'rgba(196, 218, 227, 0.8)', 'rgba(35, 212, 223, 1.0)', 'rgba(117, 223, 147, 1.0)', 'rgba(124, 249, 25, 1.0)', 'rgba(203, 104, 219, 0.8)']);
+addPieChart('#typesPieChart1', typesPointsChart1.values, typesPointsChart1.names, typesPointsChart1.colors);
 
-// addDoughnutChart('#recommendationExtract', [51, 15, 13, 10, 10, 1], ['ЦПСМД №2', '4 МКЛ', 'ЦПСМД №1', '2 МКЛ', 'ЦПСМД №3', '3 МКЛ'], ['rgba(12, 91, 124, 0.8)', 'rgba(32, 11, 161, 0.8)', 'rgba(109, 186, 168, 0.8)', 'rgba(221, 118, 118, 0.8)', 'rgba(255, 234, 146, 0.8)', 'rgba(196, 218, 227, 0.8)']);
-
-addPieChart('#typesPieChart1', [61, 7], ['К-ть звітів (аналіз видатків)', 'К-ть звітів з аналізу доходів'], ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']);
-addPieChart('#typesPieChart2', [267.7, 179.4], ['Обсяг видатків(млрд.)', 'Обсяг доходів(млрд.)'], ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']);
+addPieChart('#typesPieChart2', typesPointsChart2.values, typesPointsChart2.names, typesPointsChart2.colors);
