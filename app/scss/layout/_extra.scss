@@ -105,6 +105,10 @@
         display: flex;
         align-items: center;
         padding-bottom: 15px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
     }
 
     &__point {
@@ -323,6 +327,15 @@
         background-color: #20D432;
     }
 
+    &__wgt-bar_theme_yellow {
+        background-color: rgba(236, 213, 117, 0.8);
+    }
+
+    &__wgt-bar_theme_red {
+        background-color: #A0534E;
+    }
+
+
     &__wgt-bar_theme_blue {
         background-color: #23D4DF;
     }
@@ -383,7 +396,7 @@
 
     &__popup {
         position: absolute;
-        top: -25%;
+        top: -100%;
         left: 50%;
         transform: translate(-50%, -50%);
         background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
@@ -418,4 +431,32 @@
     @media (min-width: 768px) {
         width: 50%;
     }
+}
+
+.chart-smart__circle {
+    animation: circle-chart-fill 2s reverse;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+@keyframes circle-chart-fill {
+    to {
+        stroke-dasharray: 0 100;
+    }
+}
+
+#tooltip {
+    background: cornsilk;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.basic-subtitle__rec {
+    margin-top: 10px;
+    padding: 5px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #23D4DF;
 }
