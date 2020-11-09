@@ -31,8 +31,12 @@
         padding: 40px 20px 40px 20px;
 
         @media (min-width: 992px) {
-            max-height: 460px;
+            max-height: 545px !important;
             height: 100%;
+        }
+
+        @media (min-width: 1200px) {
+            max-height: 460px !important;
         }
     }
 
