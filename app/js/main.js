@@ -164,6 +164,11 @@ $(window).resize(function () {
 findWidth();
 
 //Doughnut objects
+var auditPointsKmu2 = {
+    values:[35, 65],
+    names: ['вчасно', 'із запізенням'],
+    colors: ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']
+};
 
 var auditSubjects = {
     values:[69, 15, 13, 10, 5, 3],
@@ -214,6 +219,8 @@ var typesPointsChart2 = {
     colors: ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']
 };
 
+
+
 function addDoughnutPoints (parent, values, names, colors, percent, showValue) {
     for (let i = 0; i < values.length; i++) {
         let name;
@@ -234,6 +241,8 @@ function addDoughnutPoints (parent, values, names, colors, percent, showValue) {
         </div>`).appendTo(parent);
     }
 }
+addDoughnutPoints('#auditPointsKmu2', auditPointsKmu2.values, auditPointsKmu2.names, auditPointsKmu2.colors, true, true);
+
 addDoughnutPoints('#auditPointsImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors, true, true);
 
 addDoughnutPoints('#auditPointsRecommendationRecipients', auditPointsRecommendationRecipients.values, auditPointsRecommendationRecipients.names, auditPointsRecommendationRecipients.colors, true, true);
@@ -380,7 +389,7 @@ addDoughnutChart('#recommendationChartRecommendationYears', recommendationPoints
 
 addDoughnutChart('#recommendationChartYears', auditPointsYears.values, auditPointsYears.names, auditPointsYears.colors);
 
-addDoughnutChart('#auditChartKmu2', [35, 65], ['вчасно', 'із запізенням'], ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']);
+addDoughnutChart('#auditChartKmu2', auditPointsKmu2.values, auditPointsKmu2.names, auditPointsKmu2.colors);
 
 addPieChart('#typesPieChart1', typesPointsChart1.values, typesPointsChart1.names, typesPointsChart1.colors, '');
 
