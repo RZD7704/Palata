@@ -61,7 +61,18 @@ function openClick(blocks, parent, btn, defaultHeight, height) {
 
     });
 }
-$('[data-toggle="tooltip"]').tooltip();
+
+$('.tooltip-circle').mouseover(function(e){
+    var value = $(this).data('title');
+    $('body').append('<div class="tooltip-smart" style="left: ' + e.pageX + 'px; top: ' + e.pageY + 'px;">' + value + '</div>');
+});
+$('.tooltip-circle').mouseout(function(e){
+    if($('.tooltip-smart').length){
+        $('.tooltip-smart').remove();
+    }
+});
+
+//$('[data-toggle="tooltip"]').tooltip();
 // // Custon Donut
 // function initCustomDonut() {
 //     var chart_circle,
@@ -164,11 +175,6 @@ $(window).resize(function () {
 findWidth();
 
 //Doughnut objects
-var auditPointsKmu2 = {
-    values:[35, 65],
-    names: ['вчасно', 'із запізенням'],
-    colors: ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']
-};
 
 var auditSubjects = {
     values:[69, 15, 13, 10, 5, 3],
@@ -219,7 +225,11 @@ var typesPointsChart2 = {
     colors: ['rgba(35, 212, 223, 1.0)', 'rgba(12, 91, 124, 1)']
 };
 
-
+var auditPointsKmu2 = {
+    values:[35, 65],
+    names: ['вчасно', 'із запізенням'],
+    colors: ['rgba(12, 91, 124, 1)', 'rgba(35, 212, 223, 1.0)']
+};
 
 function addDoughnutPoints (parent, values, names, colors, percent, showValue) {
     for (let i = 0; i < values.length; i++) {
@@ -241,8 +251,6 @@ function addDoughnutPoints (parent, values, names, colors, percent, showValue) {
         </div>`).appendTo(parent);
     }
 }
-addDoughnutPoints('#auditPointsKmu2', auditPointsKmu2.values, auditPointsKmu2.names, auditPointsKmu2.colors, true, true);
-
 addDoughnutPoints('#auditPointsImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors, true, true);
 
 addDoughnutPoints('#auditPointsRecommendationRecipients', auditPointsRecommendationRecipients.values, auditPointsRecommendationRecipients.names, auditPointsRecommendationRecipients.colors, true, true);
@@ -254,6 +262,8 @@ addDoughnutPoints('#pointsID', auditSubjects.values, auditSubjects.names, auditS
 addDoughnutPoints('#recommendationPointsRecommendationYears', recommendationPointsRecommendationYears.values, recommendationPointsRecommendationYears.names, recommendationPointsRecommendationYears.colors, true, true);
 
 addDoughnutPoints('#auditPointsYears', auditPointsYears.values, auditPointsYears.names, auditPointsYears.colors, true, true);
+
+addDoughnutPoints('#auditPointsKmu2', auditPointsKmu2.values, auditPointsKmu2.names, auditPointsKmu2.colors, true, true);
 
 // addDoughnutPoints('#typesPointsChart1', typesPointsChart1.values, typesPointsChart1.names, typesPointsChart1.colors, false, false);
 
