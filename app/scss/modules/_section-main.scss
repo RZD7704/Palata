@@ -19,10 +19,23 @@
 
     &__title {
         font-weight: bold;
-        font-size: 55px;
+        font-size: 42px;
         color: #27A1A9;
-        padding-top: 40%;
+        line-height: 48px;
+        letter-spacing: 0.08em;
+        padding-top: 30%;
         padding-right: 40px;
+        padding-bottom: 10px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        line-height: 20px;
+    }
+
+    &__subtitle-span {
+        color: #27A1A9;
     }
 
     &__support {

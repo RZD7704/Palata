@@ -45,6 +45,84 @@ $('.btn-accordion').click(function(e){
   }
 });
 
+// class Rectangle {
+//     constructor(barItems) {
+//         this.barItems = document.querySelectorAll(barItems);
+//         this.barItem = barItem; 
+//         this.numArray = numArray;
+//         this.getMaxOfArray();
+//     }
+
+//     getBarLineSize() {
+//         this.numArray = [];
+//         this.barItems.forEach(item => {
+//             let elemValue = item.getAttribute('aria-valuenow');
+//             elemValue.push();
+//         });
+//     }
+
+//     getMaxOfArray() {
+//         let mas = this.numArray,
+//             max;
+//         for (let i=0; i<mas.length; i++){
+//             for (j=0; j<mas.length; j++){
+//                 if (mas[i]>mas[j]) {
+//                     var bols = mas[i];
+//                     mas [i]= mas [j];
+//                     mas [j]= bols;
+//                     max = mas[0];
+//                 } 
+//             }
+//         } 
+//         // console.log(max); 
+//         return max;
+//     }
+// }
+
+// new Rectangle(
+//     '.progress-bar-js'
+// ).getBarLineSize();
+// new Rectangle(
+//     '.progress-bar-js'
+// ).getMaxOfArray();
+
+let barItems = document.querySelectorAll('.progress-bar-js'),
+    numArray = [],
+    max;
+
+function getBarLineSize() {
+    barItems.forEach(item => {
+        let elemValue = item.getAttribute('aria-valuenow');
+        numArray.push(elemValue);
+        // getMaxOfArray();
+    });
+}
+
+function getMaxOfArray() {
+    let mas = numArray;
+
+    for (let i=0; i<mas.length; i++){
+        for (j=0; j<mas.length; j++){
+            if (+mas[i]>mas[j]) {
+                var bols = mas[i];
+                mas [i]= mas [j];
+                mas [j]= bols;
+                max = mas[0];
+            } 
+        }
+    } 
+    return max;
+}
+
+function getProcentBarVal() {
+    
+}
+
+getBarLineSize();
+
+console.log(numArray); 
+
+
 function openClick(blocks, parent, btn, defaultHeight, height) {
     jQuery(btn).click(function (e) {
         e.preventDefault();
