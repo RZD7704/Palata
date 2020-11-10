@@ -236,19 +236,19 @@ function addDoughnutPoints (parent, values, names, colors, percent, showValue) {
         let name;
         if(percent){
             name = values[i] + '%';
-        } else {
-            name = values[i];
-        }
-        let valuePoint;
-        if(showValue){
-          valuePoint = '(' + name + ')';
-        } else {
-          valuePoint = '';
-        }
-        $(`<div class="basic-points__item">
-            <div class="basic-points__point" style="background-color:${colors[i]}"></div>
-            <div class="basic-points__txt">${names[i]} ` + valuePoint + `</div>
-        </div>`).appendTo(parent);
+    } else {
+        name = values[i];
+    }
+    let valuePoint;
+    if(showValue){
+        valuePoint = '(' + name + ')';
+    } else {
+        valuePoint = '';
+    }
+    $(`<div class="basic-points__item">
+        <div class="basic-points__point" style="background-color:${colors[i]}"></div>
+        <div class="basic-points__txt">${names[i]} ` + valuePoint + `</div>
+    </div>`).appendTo(parent);
     }
 }
 addDoughnutPoints('#auditPointsImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors, true, true);
