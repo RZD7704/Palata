@@ -38,6 +38,8 @@ $('.btn-accordion').click(function(e){
             jQuery(elem).css({'height': height + 20, 'overflow': 'hidden'});
             openClick(auditBlocks, $(elem).closest('.hide-block-parent_main-table').find('.hide-block'), $(elem).closest('.hide-block-parent_main-table').find('.hidden-block__btn'), heightArr, height);
             openClick(auditBlocks, $(elem).closest('.hide-block-parent_big-table').find('.hide-block'), $(elem).closest('.hide-block-parent_big-table').find('.hidden-block__btn'), heightArr, height);
+            openClick(auditBlocks, $(elem).closest('.hide-block-parent_main-rec1').find('.hide-block'), $(elem).closest('.hide-block-parent_main-rec1').find('.hidden-block__btn'), heightArr, height);
+            openClick(auditBlocks, $(elem).closest('.hide-block-parent_main-rec2').find('.hide-block'), $(elem).closest('.hide-block-parent_main-rec2').find('.hidden-block__btn'), heightArr, height);
         });
     });
   }

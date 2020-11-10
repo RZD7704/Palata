@@ -100,6 +100,23 @@
     border-radius: 8px;
 }
 
+.basic-block_lg {
+    @media (min-width: 992px) {
+        box-shadow: 0px 1px 8px rgba(83, 85, 155, 0.15);
+        border-radius: 8px;
+    }
+}
+
+.basic-block_mob {
+    box-shadow: 0px 1px 8px rgba(83, 85, 155, 0.15);
+    border-radius: 8px;
+
+    @media (min-width: 992px) {
+        box-shadow: none;
+        border-radius: none;
+    }
+}
+
 .basic-points {
     &__item {
         display: flex;
@@ -471,3 +488,11 @@
     z-index: 99999;
     font-size: 14px;
 }
+
+// .hide-block-parent_main-rec {
+//     width: 100%;
+
+//     @media (min-width:992px) {
+//         width: 50%;
+//     }
+// }
