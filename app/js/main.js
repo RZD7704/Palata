@@ -1,4 +1,4 @@
-AOS.init();
+AOS.init({disable: 'mobile'});
 // Accordion animation
 
 $(".accordion .card .btn-head").click(function() {
