@@ -504,3 +504,11 @@
 //         width: 50%;
 //     }
 // }
+.basic-points__item.active {
+    box-shadow: 0px 1px 8px rgba(83, 85, 155, 0.15);
+    border-radius: 8px;
+}
+
+.recommendation-charts .basic-points__item {
+    padding: 7.5px 5px !important;
+}

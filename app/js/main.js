@@ -330,13 +330,28 @@ function addDoughnutChart(selector, dataArr, labelsArr, color) {
                   afterLabel: function(tooltipItem, data) {
                     var dataset = data['datasets'][0];
                     var percent = data['datasets'][0]['data'][tooltipItem['index']];
-                    return data['labels'][tooltipItem['index']] + ': ' + percent + '%';
+                    if (selector == '#recommendationChartRecommendationYears' || selector == '##recommendationChartYears') {
+                        lightPoint(selector, tooltipItem['index']);
+                        return percent + '%';
+                    } else {
+                        return data['labels'][tooltipItem['index']] + ': ' + percent + '%';
+                    }
                   }
                 },
                 displayColors: false
             }
         }
     });
+}
+
+function lightPoint(selector, index) {
+    var pointElems = $(selector).closest('.recommendation-charts__wgt').find('.basic-points__item'),
+        elemHover = $(pointElems[index]);
+
+    if($('div').is('.basic-points__item.active')) {
+        $('.basic-points__item.active').removeClass('active');
+    } $(elemHover).addClass('active');
+
 }
 
 function addThinDoughnutChart(selector, dataArr, labelsArr, color) {
@@ -411,6 +426,36 @@ function addPieChart(selector, dataArr, labelsArr, color, typeValue) {
     });
 }
 
+function addBarChart(selector, dataArr, labelsArr, color) {
+    var ctx = document.querySelector(selector).getContext('2d');
+    var barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labelsArr,
+            datasets: [{
+                label: '# of Votes',
+                data: dataArr,
+                backgroundColor: color,
+                borderColor: color,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            legend: {
+                display: false
+            },
+            scales: {
+                xAxes: [{
+                    display: false
+                }],
+                yAxes: [{
+                    display: false
+                }]
+            }
+        }
+    });
+}
+
 addDoughnutChart('#auditImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
 
 addDoughnutChart('#auditChartRecommendationRecipients', auditPointsRecommendationRecipients.values, auditPointsRecommendationRecipients.names, auditPointsRecommendationRecipients.colors);
@@ -426,3 +471,50 @@ addDoughnutChart('#auditChartKmu2', auditPointsKmu2.values, auditPointsKmu2.name
 addPieChart('#typesPieChart1', typesPointsChart1.values, typesPointsChart1.names, typesPointsChart1.colors, '');
 
 addPieChart('#typesPieChart2', typesPointsChart2.values, typesPointsChart2.names, typesPointsChart2.colors, 'млрд грн');
+
+addDoughnutChart('#auditChartCategories', auditPointsCategories.values, auditPointsCategories.names, auditPointsCategories.colors);
+
+// addBarChart('#typesBarChart1', auditPointsKmu2.values, auditPointsKmu2.names, auditPointsKmu2.colors);
+
+
+// function addBarChart(selector, dataArr, labelsArr) {
+//     var ctx = document.querySelector(selector).getContext('2d');
+//     var barChart = new Chart(ctx, {
+//         type: 'bar',
+//         data: {
+//             labels: labelsArr,
+//             datasets: [{
+//                 // label: '%',
+//                 data: dataArr,
+//                 backgroundColor: [
+//                     'rgba(249,167,167, 0.8)',
+//                     'rgba(249,167,167, 0.8)',
+//                     'rgba(249,167,167, 0.8)',
+//                     'rgba(70,113,198, 0.8)'
+//                 ],
+//                 borderColor: [
+//                     'rgba(249,167,167, 0.8)',
+//                     'rgba(249,167,167, 0.8)',
+//                     'rgba(249,167,167, 0.8)',
+//                     'rgba(249,167,167, 0.8)'
+
+//                 ]
+//             }]
+//         },
+//         options: {
+//             legend: {
+//                 display: false
+//             },
+//             scales: {
+//                 xAxes: [{
+//                     display: false
+//                 }],
+//                 yAxes: [{
+//                     display: false
+//                 }]
+//             }
+//         }
+//     });
+// }
+
+addBarChart('#typesBarChart1', [436, 307, 281, 213], ['Муковісцидоз - 9', 'Муковісцидоз' , 'Муковісцидоз', 'Муковісцидоз' , 'Муковісцидоз'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)']);
