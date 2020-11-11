@@ -330,7 +330,7 @@ function addDoughnutChart(selector, dataArr, labelsArr, color) {
                   afterLabel: function(tooltipItem, data) {
                     var dataset = data['datasets'][0];
                     var percent = data['datasets'][0]['data'][tooltipItem['index']];
-                    if (selector == '#recommendationChartRecommendationYears' || selector == '##recommendationChartYears') {
+                    if (selector == '#recommendationChartRecommendationYears' || selector == '#recommendationChartYears') {
                         lightPoint(selector, tooltipItem['index']);
                         return percent + '%';
                     } else {
@@ -485,8 +485,39 @@ function addBarChart(selector, dataArr, labelsArr, color, typeLabelArr) {
         },
         options: {
             legend: {
-                display: false
+                display: true,
+                onClick: (e) => e.stopPropagation()
             },
+            tooltips: {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    return '';
+                  },
+                  title: function(){
+                    return '';
+                  },
+                  afterLabel: function(tooltipItem, data) {
+                    var dataset = data['datasets'][0];
+                    var percent = data['datasets'][0]['data'][tooltipItem['index']];
+                    var index = tooltipItem.datasetIndex;
+                    return data['datasets'][index]['label'] + ': ' + percent;
+                  }
+                },
+                displayColors: false
+            },
+            plugins: {
+                datalabels: {
+                    color: '#fff',
+                    textAlign: 'center',
+                    font: {
+                        lineHeight: 1.6,
+                        size: 16
+                    },
+                    formatter: function(value, ctx) {
+                      return value;
+                    }
+                }
+            }, 
             scales: {
                 yAxes: [{
                     display: false,
@@ -500,7 +531,7 @@ function addBarChart(selector, dataArr, labelsArr, color, typeLabelArr) {
             }
         }
     });
-    }
+}
 
 
 addDoughnutChart('#auditImplementation', auditPointsImplementation.values, auditPointsImplementation.names, auditPointsImplementation.colors);
