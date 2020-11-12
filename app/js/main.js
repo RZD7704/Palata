@@ -269,7 +269,7 @@ function addDoughnutPoints (parent, values, names, colors, percent, showValue) {
     }
     $(`<div class="basic-points__item">
         <div class="basic-points__point" style="background-color:${colors[i]}"></div>
-        <div class="basic-points__txt">${names[i]} ` + valuePoint + `</div>
+        <div class="basic-points__txt">${names[i]}</div>
     </div>`).appendTo(parent);
     }
 }
@@ -330,12 +330,8 @@ function addDoughnutChart(selector, dataArr, labelsArr, color) {
                   afterLabel: function(tooltipItem, data) {
                     var dataset = data['datasets'][0];
                     var percent = data['datasets'][0]['data'][tooltipItem['index']];
-                    if (selector == '#recommendationChartRecommendationYears' || selector == '#recommendationChartYears') {
-                        lightPoint(selector, tooltipItem['index']);
-                        return percent + '%';
-                    } else {
-                        return data['labels'][tooltipItem['index']] + ': ' + percent + '%';
-                    }
+                    lightPoint(selector, tooltipItem['index']);
+                    return percent + '%';
                   }
                 },
                 displayColors: false
@@ -345,9 +341,11 @@ function addDoughnutChart(selector, dataArr, labelsArr, color) {
 }
 
 function lightPoint(selector, index) {
-    var pointElems = $(selector).closest('.recommendation-charts__wgt').find('.basic-points__item'),
+    var pointElems = $(selector).closest('.chart-wgt').find('.basic-points__item'),
         elemHover = $(pointElems[index]);
-
+    $(selector).mouseout(function(e){
+        $('.basic-points__item.active').removeClass('active');
+    });
     if($('div').is('.basic-points__item.active')) {
         $('.basic-points__item.active').removeClass('active');
     } $(elemHover).addClass('active');
@@ -417,6 +415,7 @@ function addPieChart(selector, dataArr, labelsArr, color, typeValue) {
                   afterLabel: function(tooltipItem, data) {
                     var dataset = data['datasets'][0];
                     var percent = data['datasets'][0]['data'][tooltipItem['index']];
+                    lightPoint(selector, tooltipItem['index']);
                     return data['labels'][tooltipItem['index']] + ': ' + percent + ' ' + typeValue;
                   }
                 },
@@ -426,43 +425,7 @@ function addPieChart(selector, dataArr, labelsArr, color, typeValue) {
     });
 }
 
-// function addBarChart(selector, dataArr, labelsArr, color) {
-//     var ctx = document.querySelector(selector).getContext('2d');
-//     var barChart = new Chart(ctx, {
-//         type: 'bar',
-//         data: {
-//             labels: labelsArr,
-//             datasets: [{
-//                 label: '# of Votes',
-//                 data: dataArr,
-//                 backgroundColor: color,
-//                 borderColor: color,
-//                 borderWidth: 1,
-//                 barPercentage: 0.5
-
-//             }]
-//         },
-//         options: {
-//             legend: {
-//                 display: false
-//             },
-//             scales: {
-//                 xAxes: [{
-//                     display: true
-//                 }],
-//                 yAxes: [{
-//                     display: true,
-//                     ticks: {
-//                         beginAtZero: true
-//                     }
-//                 }]
-//             },
-//         }
-//     });
-// }
-
-
-function addBarChart(selector, dataArr, labelsArr, color, typeLabelArr) {
+function addBarChart(selector, dataArr, dataPercent, labelsArr, color, typeLabelArr, typeValue) {
     var ctx = document.querySelector(selector).getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -485,7 +448,7 @@ function addBarChart(selector, dataArr, labelsArr, color, typeLabelArr) {
         },
         options: {
             legend: {
-                display: true,
+                display: false,
                 onClick: (e) => e.stopPropagation()
             },
             tooltips: {
@@ -497,10 +460,8 @@ function addBarChart(selector, dataArr, labelsArr, color, typeLabelArr) {
                     return '';
                   },
                   afterLabel: function(tooltipItem, data) {
-                    var dataset = data['datasets'][0];
-                    var percent = data['datasets'][0]['data'][tooltipItem['index']];
                     var index = tooltipItem.datasetIndex;
-                    return data['datasets'][index]['label'] + ': ' + percent;
+                    return data['datasets'][index]['label'] + ': ' + dataPercent[tooltipItem.index][index] + typeValue;
                   }
                 },
                 displayColors: false
@@ -556,5 +517,5 @@ addDoughnutChart('#auditChartCategories', auditPointsCategories.values, auditPoi
 // addBarChart('#typesBarChart1', [436, 528, 436, 436], ['Муковісцидоз - 9', 'Муковісцидоз' , 'Муковісцидоз', 'Муковісцидоз'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)']);
 
 // addBarChart('#typesBarChart2', [[436,436], 300, 436, 436], ['Муковісцидоз - 9', 'Муковісцидоз' , 'Муковісцидоз', 'Муковісцидоз'], ['rgba(164, 201, 255, 0.8)', 'rgba(55, 98, 204, 0.8)', 'rgba(249, 167, 167, 0.8)', 'rgba(221, 118, 118, 0.8)']);
-addBarChart('#typesBarChart1', [[436, 307], [281, 213]], [['Виконані'], ['Невиконані']], ['rgba(164, 201, 255, 0.8)', 'rgba(249, 167, 167, 0.8)'],['Конкретні', 'Неконкретні'], ['Конкретні', 'Неконкретні'] );
-addBarChart('#typesBarChart2', [[382, 361], [242, 252]], [['Виконані'], ['Невиконані']], ['rgba(164, 201, 255, 0.8)', 'rgba(249, 167, 167, 0.8)'],['Вимірювані', 'Невимірювані'], ['Вимірювані', 'Невимірювані'] );
+addBarChart('#typesBarChart1', [[436, 307], [281, 213]], [[59, 41], [57, 43]], [['Виконані'], ['Невиконані']], ['rgba(164, 201, 255, 0.8)', 'rgba(249, 167, 167, 0.8)'],['Конкретні', 'Неконкретні'], '%' );
+addBarChart('#typesBarChart2', [[382, 361], [242, 252]], [[51, 49], [49, 51]], [['Виконані'], ['Невиконані']], ['rgba(164, 201, 255, 0.8)', 'rgba(249, 167, 167, 0.8)'],['Вимірювані', 'Невимірювані'], '%' );

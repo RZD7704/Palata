@@ -1,10 +1,13 @@
 .audits-deadlines {
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
 
     @media (min-width: 992px) {
         padding: 40px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     &__wgt {

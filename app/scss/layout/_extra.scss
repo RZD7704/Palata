@@ -505,10 +505,20 @@
 //     }
 // }
 .basic-points__item.active {
-    box-shadow: 0px 1px 8px rgba(83, 85, 155, 0.15);
+    background-color: #ededed;
     border-radius: 8px;
 }
 
-.recommendation-charts .basic-points__item {
+.basic-points__item {
     padding: 7.5px 5px !important;
 }
+
+.types-subtitle {
+    font-size: 12px;
+}
+
+// .deadlines-tabs__content-wrapper .chart-wgt {}
+
+// .audits-deadlines__wgt .chart-wgt {}
+
+// .audits-charts__content 
